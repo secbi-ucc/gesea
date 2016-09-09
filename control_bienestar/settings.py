@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'actividades',
     'profesor',
     'programacion',
+    'core',
 )
 
 MIDDLEWARE_CLASSES = (
