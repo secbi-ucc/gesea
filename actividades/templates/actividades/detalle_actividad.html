@@ -1,0 +1,16 @@
+{% extends "core/base.html" %}
+
+{% block contenido %}
+
+
+<div class="jumbotron">
+  <h1>{{b}}</h1>
+  <p>
+    Descripcion de la actividad a realizar.
+  </p>
+  <p>{{b.tipo_actividad}}</p>
+  <p><a class="btn btn-primary btn-lg">{{b.servicio}}</a></p>
+</div>
+
+
+{% endblock %}
