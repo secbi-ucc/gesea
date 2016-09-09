@@ -1,6 +1,3 @@
-
 *.pyc
-
-*.pyc
-
+*.sqlite3
 *.pyc
