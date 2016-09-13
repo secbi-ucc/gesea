@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'profesor',
     'programacion',
     'core',
+    'inscripcion',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -70,9 +71,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-co'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Bogota/America'
 
 USE_I18N = True
 
