@@ -5,7 +5,7 @@ from .models import Servicio, TipoActividad, Actividad
 
 
 class Actividades (admin.ModelAdmin):
-	list_display = ['id', 'servicio', 'tipo_actividad','Estado_actividad']
+	list_display = ['id', 'servicio', 'tipo_actividad','Cupo_Actividad','Numero_Estudiantes','Estado_actividad']
 	class Meta:
 		model = Actividad
 

@@ -21,6 +21,8 @@ class Actividad(models.Model):
     servicio = models.ForeignKey(Servicio)
     tipo_actividad = models.ForeignKey(TipoActividad)
     Estado_actividad =  models.CharField(max_length=30, choices=ESTADOS_ACTIVIDAD, default='INACTIVA')
+    Cupo_Actividad = models.IntegerField()
+    Numero_Estudiantes = models.IntegerField()
 
     def __unicode__(self):
         return unicode(self.tipo_actividad)

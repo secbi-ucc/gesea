@@ -1,18 +1,18 @@
 from django.contrib import admin
-from .models import Estudiantes , Inscripcion
+from .models import Estudiantes, Inscripcion
 
 
 # Register your models here.
 
-class Estudiante (admin.ModelAdmin):
-	list_display = ['idEstudiante','nombre','apellidos','semestre','sexo','facultad','correo','telefono']
-	class Meta:
-		model = Estudiantes
-
 class Inscripciones (admin.ModelAdmin):
-	list_display = ['id','TipodeParticipacion','estudiante']
+	list_display = ['id','TipodeParticipacion']
 	class Meta:
 		model = Inscripcion
 
-admin.site.register(Estudiantes,Estudiante)
+class Estudiante (admin.ModelAdmin):
+	list_display = ['idEstudiante','Horas_estudiante','nombre','apellidos','semestre','sexo','facultad','correo','telefono']
+	class Meta:
+		model = Estudiantes
+
 admin.site.register(Inscripcion,Inscripciones)
+admin.site.register(Estudiantes,Estudiante)

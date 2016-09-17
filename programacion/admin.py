@@ -8,7 +8,7 @@ class Horarios (admin.ModelAdmin):
 		model = Horario
 
 class Programaciones (admin.ModelAdmin):
-	list_display = ['id','Servicio','actividad','profesor','lugarActividad','horario',]
+	list_display = ['id','Servicio','actividad','inscripcion','profesor','lugarActividad','horario']
 	class Meta:
 		model = Programacion
 
