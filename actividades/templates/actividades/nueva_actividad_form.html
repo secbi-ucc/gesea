@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+
+
+{% block contenido %}
+
+<form  action="" method="post">
+  {% csrf_token %}
+  {{form_actividad.as_ul}}
+  <input type="submit" name="name" value="Guardar">
+
+</form>
+
+
+{% endblock %}

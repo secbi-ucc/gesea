@@ -73,7 +73,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'es-co'
 
-TIME_ZONE = 'Bogota/America'
+TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
