@@ -3,7 +3,7 @@ from .models import Programacion,Lugar,Horario
 # Register your models here.
 
 class Horarios (admin.ModelAdmin):
-	list_display = ['id', 'Hora_inicio','Hora_Final','Fecha_Inicio','Fecha_Final']
+	list_display = ['id','Fecha_Inicio','Fecha_Final']
 	class Meta:
 		model = Horario
 

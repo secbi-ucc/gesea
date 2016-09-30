@@ -5,13 +5,11 @@ from actividades.models import Actividad ,Servicio
 from django.utils import timezone
 
 class Horario(models.Model):
-    Hora_inicio = models.TimeField(blank=True, null=True)
-    Hora_Final = models.TimeField(blank=True, null=True)
-    Fecha_Inicio = models.DateField(blank=True, null=True)
-    Fecha_Final = models.DateField(blank=True, null=True)
+    Fecha_Inicio = models.DateTimeField(null=True)
+    Fecha_Final = models.DateTimeField(null=True)
 
     def __unicode__(self):
-        return unicode(self.Hora_inicio)
+        return unicode(self.Fecha_Inicio)
 
 
 class Lugar(models.Model):
