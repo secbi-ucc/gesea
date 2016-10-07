@@ -14,9 +14,9 @@ class Migration(migrations.Migration):
             name='Actividad',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('Estado_actividad', models.CharField(default=b'INACTIVA', max_length=30, choices=[(b'ACTIVA', b'Activa'), (b'INACTIVA', b'Inactiva')])),
-                ('Cupo_Actividad', models.IntegerField()),
-                ('Numero_Estudiantes', models.IntegerField()),
+                ('Codigo_actividad', models.CharField(max_length=10)),
+                ('Estado_actividad', models.CharField(default=b'ABIERTA', max_length=30, choices=[(b'ABIERTA', b'Abierta'), (b'CERRADA', b'Cerrada')])),
+                ('Cupo_Actividad', models.IntegerField(max_length=5)),
             ],
             options={
             },
@@ -26,6 +26,7 @@ class Migration(migrations.Migration):
             name='Servicio',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('Codigo_servicio', models.CharField(max_length=10)),
                 ('nombre', models.CharField(max_length=50)),
             ],
             options={
@@ -36,6 +37,7 @@ class Migration(migrations.Migration):
             name='TipoActividad',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('Codigo_tipoActividad', models.CharField(max_length=10)),
                 ('nombre', models.CharField(max_length=50)),
             ],
             options={

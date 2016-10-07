@@ -3,7 +3,7 @@ from .models import Profesor
 
 
 class Profesores (admin.ModelAdmin):
-	list_display = ['id_ucc','Nombre','apellidos','Identificacion','estado']
+	list_display = ['id_ucc','Identificacion','estado']
 	class Meta:
 		model = Profesor
 

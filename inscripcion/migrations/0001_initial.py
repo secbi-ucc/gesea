@@ -7,13 +7,15 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
+        ('programacion', '__first__'),
     ]
 
     operations = [
         migrations.CreateModel(
             name='Estudiantes',
             fields=[
-                ('idEstudiante', models.AutoField(serialize=False, primary_key=True)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('Codigo_estudiante', models.CharField(max_length=10)),
                 ('nombre', models.CharField(max_length=30)),
                 ('apellidos', models.CharField(max_length=30)),
                 ('semestre', models.CharField(max_length=30)),
@@ -22,6 +24,7 @@ class Migration(migrations.Migration):
                 ('correo', models.CharField(max_length=30)),
                 ('telefono', models.CharField(max_length=30)),
                 ('Horas_estudiante', models.IntegerField()),
+                ('Estado', models.CharField(default='ACTIVO', max_length=20, choices=[('ACTIVO', 'Activo'), ('INACTIVO', 'Inactivo')])),
             ],
             options={
             },
@@ -31,7 +34,7 @@ class Migration(migrations.Migration):
             name='Inscripcion',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('TipodeParticipacion', models.CharField(max_length=30, choices=[('Curso', 'Curso'), ('Grupo de representacion', 'Grupo de representacion'), ('Equipos de representacion', 'Equipos de representacion'), ('Brigada', 'Brigada'), ('Otro', 'Otro')])),
+                ('actividad', models.ForeignKey(to='programacion.Programacion')),
             ],
             options={
             },

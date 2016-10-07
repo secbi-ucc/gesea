@@ -1,24 +1,22 @@
 from __future__ import unicode_literals
 from django.db import models
+from programacion.models import Programacion
 
 
 # Create your models here.
 
 class Inscripcion(models.Model):
-    Tipo_participacion = (
-        ('Curso', 'Curso'),
-        ('Grupo de representacion', 'Grupo de representacion'),
-        ('Equipos de representacion', 'Equipos de representacion'),
-        ('Brigada', 'Brigada'),
-        ('Otro', 'Otro'),
-    )
-    TipodeParticipacion = models.CharField(max_length=30, choices=Tipo_participacion)
+    actividad = models.ForeignKey(Programacion)
     def __unicode__(self):
-        return unicode(self.TipodeParticipacion)
+        return unicode(self.actividad)
 
 
 class Estudiantes(models.Model):
-    idEstudiante = models.AutoField( primary_key=True)
+    ESTADOS_ESTUDIANTE = (
+        ('ACTIVO', 'Activo'),
+        ('INACTIVO', 'Inactivo'),
+    )
+    Codigo_estudiante = models.CharField(max_length=10)
     nombre = models.CharField(max_length=30)
     apellidos = models.CharField(max_length=30)
     semestre = models.CharField(max_length=30)
@@ -28,6 +26,7 @@ class Estudiantes(models.Model):
     telefono = models.CharField(max_length=30)
     Horas_estudiante = models.IntegerField()
     inscripcion = models.ManyToManyField(Inscripcion)
+    Estado = models.CharField(max_length=20, choices=ESTADOS_ESTUDIANTE, default='ACTIVO')
 
     def __unicode__(self):
         return unicode(self.nombre)

@@ -15,11 +15,9 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Profesor',
             fields=[
-                ('Nombre', models.CharField(max_length=30)),
-                ('apellidos', models.CharField(max_length=30)),
                 ('id_ucc', models.PositiveSmallIntegerField(serialize=False, primary_key=True)),
                 ('Identificacion', models.PositiveSmallIntegerField()),
-                ('estado', models.CharField(max_length=20, choices=[(b'ACTIVO', b'Activo'), (b'INACTIVO', b'Inactivo')])),
+                ('estado', models.CharField(default=b'ACTIVO', max_length=20, choices=[(b'ACTIVO', b'Activo'), (b'INACTIVO', b'Inactivo')])),
                 ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],
             options={
