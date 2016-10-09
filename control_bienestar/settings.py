@@ -55,6 +55,8 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'control_bienestar.urls'
 
+LOGIN_REDIRECT_URL = 'actividades-lista'
+
 WSGI_APPLICATION = 'control_bienestar.wsgi.application'
 
 
@@ -83,6 +85,11 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+STATICFILES_DIRS = (
+    os.path.join('core/static'),
+)
+
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
