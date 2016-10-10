@@ -13,13 +13,13 @@ class Horario(models.Model):
 
 class Lugar(models.Model):
     Lugar_Actividad = (
-        ('Canchas Deportivas', 'Canchas Deportiva'),
-        ('Teatrino', 'Teatrino'),
-        ('Cafeteria', 'Cafeteria'),
-        ('Auditorio', 'Auditorio'),
-        ('7mo Piso', '7mo Piso'),
-        ('1mo Piso', '1mo Piso'),
-        ('Otro', 'Otro'),
+        ('CANCHAS DEPORTIVAS', 'Canchas Deportiva'),
+        ('TEATRINO', 'Teatrino'),
+        ('CAFETERIA', 'Cafeteria'),
+        ('AUDITORIO', 'Auditorio'),
+        ('7MO PISO', '7mo Piso'),
+        ('1MO PISO', '1mo Piso'),
+        ('OTRO', 'Otro'),
     )
     NombreLugar = models.CharField(max_length=30, choices=Lugar_Actividad)
 
@@ -46,11 +46,11 @@ class DiaActividad(models.Model):
 
 class Programacion(models.Model):
     Tipo_participacion = (
-        ('Curso', 'Curso'),
-        ('Grupo de representacion', 'Grupo de representacion'),
-        ('Equipos de representacion', 'Equipos de representacion'),
-        ('Brigada', 'Brigada'),
-        ('Otro', 'Otro'),
+        ('CURSO', 'Curso'),
+        ('GRUPO DE REPRESENTACION', 'Grupo de representacion'),
+        ('EQUIPOS DE REPRESENTACION', 'Equipos de representacion'),
+        ('BRIGADA', 'Brigada'),
+        ('OTRO', 'Otro'),
     )
     TipodeParticipacion = models.CharField(max_length=30, choices=Tipo_participacion)
     profesor = models.ForeignKey(Profesor)
