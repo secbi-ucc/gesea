@@ -1,0 +1,41 @@
+{% extends "core/base.html" %}
+
+{% block contenido %}
+
+
+<!DOCTYPE html>
+<head>
+</head>
+
+<body>
+  <div class="text-left">
+    <h2>Agregar nueva actividad</h2>
+    <p>Ingresa el nombre de la actividad al que quieres ser agregado.</p>
+  </div>
+  <hr/>
+
+  <table class="table table-inverse">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre de la actividad</th>
+        <th>Codigo de la actividad</th>
+        <th>Tipo de actividad</th>
+        <th>Cupo de actividad</th>
+        <th>Numero de estudiantes</th>
+    </tbody>
+  </table>
+
+</body>
+
+<div class="button-right">
+  <button type="button" class="btn btn-primary btn-lg active">Agregar</button>
+  <button type="button" class="btn btn-default btn-lg active">Modificar</button>
+</div>
+
+</html>
+
+
+
+
+{% endblock %}

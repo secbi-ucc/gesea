@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
             name='Lugar',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('NombreLugar', models.CharField(max_length=30, choices=[(b'Canchas Deportivas', b'Canchas Deportiva'), (b'Teatrino', b'Teatrino'), (b'Cafeteria', b'Cafeteria'), (b'Auditorio', b'Auditorio'), (b'7mo Piso', b'7mo Piso'), (b'1mo Piso', b'1mo Piso'), (b'Otro', b'Otro')])),
+                ('NombreLugar', models.CharField(max_length=30, choices=[(b'CANCHAS DEPORTIVAS', b'Canchas Deportiva'), (b'TEATRINO', b'Teatrino'), (b'CAFETERIA', b'Cafeteria'), (b'AUDITORIO', b'Auditorio'), (b'7MO PISO', b'7mo Piso'), (b'1MO PISO', b'1mo Piso'), (b'OTRO', b'Otro')])),
             ],
             options={
             },
@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
             name='Programacion',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('TipodeParticipacion', models.CharField(max_length=30, choices=[(b'Curso', b'Curso'), (b'Grupo de representacion', b'Grupo de representacion'), (b'Equipos de representacion', b'Equipos de representacion'), (b'Brigada', b'Brigada'), (b'Otro', b'Otro')])),
+                ('TipodeParticipacion', models.CharField(max_length=30, choices=[(b'CURSO', b'Curso'), (b'GRUPO DE REPRESENTACION', b'Grupo de representacion'), (b'EQUIPOS DE REPRESENTACION', b'Equipos de representacion'), (b'BRIGADA', b'Brigada'), (b'OTRO', b'Otro')])),
                 ('Fecha_Inicio', models.DateTimeField(null=True)),
                 ('Fecha_Final', models.DateTimeField(null=True)),
                 ('Dia_semana', models.ManyToManyField(to='programacion.DiaActividad')),

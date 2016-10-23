@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+
+
+{% block contenido %}
+
+
+
+<body>
+  <div class="text-left">
+    <h2>Añadir lugar</h2>
+  </div>
+  <hr/>
+</body>
+<form class="form-horizontal">
+
+  <div class="form-group">
+      <label class="control-label col-xs-3">Lugar de la actividad:</label>
+
+        <div class="col-xs-3">
+            <select class="form-control">
+                <option></option>
+            </select>
+        </div>
+  </div>
+
+    <br>
+    <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-9">
+            <input type="submit" class="btn btn-primary" value="Guardar">
+            <input type="reset" class="btn btn-default" value="Limpiar">
+        </div>
+    </div>
+</form>
+
+{% endblock %}

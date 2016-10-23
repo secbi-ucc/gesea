@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('Codigo_servicio', models.CharField(max_length=10)),
-                ('nombre', models.CharField(max_length=50)),
+                ('nombre', models.CharField(max_length=50, choices=[(b'PROMOCION DE LA SALUD', b'Promocion de la salud'), (b'DEPORTES', b'Deportes'), (b'PATRIMONIO CULTURAL', b'Patrimonio cultural'), (b'ORIENTACION Y ACOMPANAMIENTO', b'Orientacion y acompanamiento')])),
             ],
             options={
             },
@@ -38,7 +38,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('Codigo_tipoActividad', models.CharField(max_length=10)),
-                ('nombre', models.CharField(max_length=50)),
+                ('nombre', models.CharField(max_length=50, choices=[(b'ATENCION PSICOLOGICA', b'Atencion psicologica'), (b'ATENCION PSICOSOCIAL', b'Atencion psicosocial '), (b'CONSEJERIAS', b'Consejerias'), (b'DANZA', b'Danza'), (b'FUTBOL 11', b'Futbol 11'), (b'GESTION AMBIENTAL', b'Gestion ambiental'), (b'MEDICINA GENERAL', b'Medicina general'), (b'MICROFUTBOL', b'Microfutbol Masc Y Fem'), (b'MUSICA', b'Musica'), (b'ORIENTACION ESPIRITUAL-CONVIVENCIA', b'Orientacion espiritual- convivencia'), (b'PRIMEROS AUXILIOS', b'Primeros auxilios'), (b'PROMOCIONES SOCIOECONOMICAS', b'promociones socioeconomicas'), (b'SOFTBOL', b'Softbol'), (b'TEATRO', b'Teatro'), (b'TORNEO EMPRESARIAL MINIFUTBOL', b'Torneo Empresarial Mini Futbol'), (b'TORNEO INTERNO MICRO', b'Torneo Interno Micro'), (b'VOLEIBOL', b'Voleibol Masc Y Fem')])),
             ],
             options={
             },

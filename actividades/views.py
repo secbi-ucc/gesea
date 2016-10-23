@@ -33,3 +33,29 @@ def nueva_actividad(request):
             return render(request, "actividades/nueva_actividad_mesaje.html")
 
     return render(request,"actividades/nueva_actividad_form.html", {"form_actividad":form_actividad})
+
+def agregar_servicios (request):
+
+        return render (request, 'actividades/agregar_servicios.html',)
+
+def lista_servicio (request):
+
+    return render (request, 'actividades/forms/lista_servicios.html',)
+
+def agregar_actividad(request):
+
+    c = Actividad.objects.all()
+
+    return render(request, 'actividades/agregar.html', {'c':c})
+
+def servicio_actividad(request):
+
+    f = Actividad.objects.all()
+
+    return render(request, 'actividades/forms/servicio.html', {'f':f})
+
+def tipo_actividad(request):
+
+    g = Actividad.objects.all()
+
+    return render(request, 'actividades/forms/tipo.html', {'g':g})

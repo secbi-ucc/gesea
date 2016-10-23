@@ -1,0 +1,32 @@
+{% extends "core/base.html" %}
+
+
+{% block contenido %}
+
+</br></br>
+<form class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-xs-3">Nombre de Usuario:</label>
+        <div class="col-xs-3">
+            <input type="usuario" class="form-control" id="inputusuario" placeholder="Usuario">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">Password:</label>
+        <div class="col-xs-3">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">Confirmar Password:</label>
+        <div class="col-xs-3">
+            <input type="password" class="form-control" placeholder="Confirmar Password">
+        </div>
+    </div>
+</form>
+
+<button type="button" class="btn btn-primary btn-lg active">Guardar</button>
+<button type="button" class="btn btn-default btn-lg active">Guardar y agregar otro</button>
+<button type="button" class="btn btn-default btn-lg active">Guardar y segurir editando</button><
+
+{% endblock %}

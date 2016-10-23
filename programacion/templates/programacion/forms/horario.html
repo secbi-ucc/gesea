@@ -1,0 +1,65 @@
+{% extends "core/base.html" %}
+
+
+{% block contenido %}
+
+<div class="text-left">
+  <h2>Horario</h2>
+</div>
+<hr/>
+
+<form class="form-horizontal">
+  <div class="container">
+      <div class='col-md-5'>
+        </h3>Fecha de inicio</h3>
+          <div class="form-group">
+              <div class='input-group date' id='datetimepicker6'>
+                  <input type='text' class="form-control" />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class='col-md-5'>
+      </h3>Fecha de fin</h3>
+          <div class="form-group">
+              <div class='input-group date' id='datetimepicker7'>
+                  <input type='text' class="form-control" />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#datetimepicker6').datetimepicker();
+          $('#datetimepicker7').datetimepicker({
+              useCurrent: false //Important! See issue #1075
+          });
+          $("#datetimepicker6").on("dp.change", function (e) {
+              $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+          });
+          $("#datetimepicker7").on("dp.change", function (e) {
+              $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+    <br>
+    <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-9">
+            <input type="submit" class="btn btn-primary" value="Guardar">
+            <input type="reset" class="btn btn-default" value="Limpiar">
+        </div>
+    </div>
+</form>
+
+{% endblock %}

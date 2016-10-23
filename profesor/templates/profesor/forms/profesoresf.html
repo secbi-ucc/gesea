@@ -1,0 +1,53 @@
+{% extends "core/base.html" %}
+
+{% block contenido %}
+
+<form class="form-horizontal">
+
+    <div class="form-group">
+        <label class="control-label col-xs-3">Nombre:</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" placeholder="Nombre">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">Apellido:</label>
+        <div class="col-xs-5">
+            <input type="text" class="form-control" placeholder="Apellido">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">User:</label><!--Aqui va un Combobox-->
+        <div class="col-xs-5">
+            <input type="tel" class="form-control" placeholder="Usuario">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">ID UCC:</label>
+        <div class="col-xs-5">
+            <input type="tel" class="form-control" placeholder="ID ucc">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">Identificacion:</label>
+        <div class="col-xs-5">
+            <input type="tel" class="form-control" placeholder="Identifiacion">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-3">Estado:</label>   <!--Aqui va un Combobox-->
+        <div class="col-xs-5">
+            <input type="tel" class="form-control" placeholder="Estado">
+        </div>
+    </div>
+
+    <br>
+    <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-5">
+            <input type="submit" class="btn btn-primary" value="Enviar">
+            <input type="reset" class="btn btn-default" value="Limpiar">
+        </div>
+    </div>
+</form>
+
+{% endblock %}
