@@ -1,0 +1,46 @@
+{% extends "core/base.html" %}
+{% load static%}
+
+{%block contenido %}
+<section id="main-slider" class="no-margin">
+    <div class="carousel slide">
+        <ol class="carousel-indicators">
+            <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#main-slider" data-slide-to="1"></li>
+            <li data-target="#main-slider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+
+            <div class="item active" style="background-image: url({% static "assets/images/bg1.jpg" %})">
+                <div class="container">
+                    <div class="row slide-margin">
+                        <div class="col-sm-6">
+                            <div class="carousel-content">
+                                <h1 class="animation animated-item-1">Bienvenido a Bienestar Universitario</h1>
+                                <h2 class="animation animated-item-2"></h2>
+
+                                {% if user.is_superuser%}
+                                <a class="btn-slide animation animated-item-3" href="{% url "actividades-nueva" %}">Agregar Actividades</a>
+                                {% else %}
+                                <a class="btn-slide animation animated-item-3" href="{% url "actividades-lista" %}">Ver lista actividades</a>
+                                {% endif%}
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 hidden-xs animation animated-item-4">
+                            <div class="slider-img">
+                                <img src="{% static "assets/images/img1.png"%}" class="img-responsive">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div><!--/.item-->
+
+
+
+
+        </div><!--/.carousel-inner-->
+    </div><!--/.carousel-->
+</section><!--/#main-slider-->
+{% endblock %}

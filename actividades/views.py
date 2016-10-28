@@ -3,7 +3,7 @@ from .models import Actividad
 from django.shortcuts import get_object_or_404
 from .forms import ActividadForm
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth.decorators import user_passes_test
 
 @login_required ( login_url = '/login/' )
 def lista_actividades(request):
@@ -20,7 +20,7 @@ def detalle_actividad(request, id_actividad):
 
     return render(request, 'actividades/detalle_actividad.html', {'b':b})
 
-@login_required ( login_url = '/login/' )
+@user_passes_test(lambda u: u.is_superuser, login_url='/no-permitido/')
 def nueva_actividad(request):
 
     form_actividad = ActividadForm()

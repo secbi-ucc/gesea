@@ -55,7 +55,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'control_bienestar.urls'
 
-LOGIN_REDIRECT_URL = 'actividades-lista'
+LOGIN_REDIRECT_URL = 'inicio'
 
 WSGI_APPLICATION = 'control_bienestar.wsgi.application'
 
