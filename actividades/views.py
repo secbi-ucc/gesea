@@ -34,6 +34,26 @@ def nueva_actividad(request):
 
     return render(request,"actividades/nueva_actividad_form.html", {"form_actividad":form_actividad})
 
+@login_required ( login_url = '/login/' )
+def actividad_eliminar(request, id_actividad):
+     instance = get_object_or_404(Actividad, pk=id_actividad)
+     instance.delete()
+     a = Actividad.objects.all()
+     b = "Actividad Eliminada Correctamente"
+     return render(request, 'actividades/lista_actividades.html', {'a':a,'b':b})
+
+@login_required ( login_url = '/login/' )
+def editar_actividad(request, id_actividad):
+    instance = get_object_or_404(Actividad, pk=id_actividad)
+    form = ActividadForm(request.POST or None, instance=instance)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            a = Actividad.objects.all()
+            b = "Actividad Actualizada Correctamente"
+            return render(request, 'actividades/lista_actividades.html', {'a': a,'b':b})
+    return render(request, 'actividades/editar_actividades.html', {'form': form})
+
 def agregar_servicios (request):
 
         return render (request, 'actividades/agregar_servicios.html',)
