@@ -1,0 +1,36 @@
+{% extends "core/base_admin.html" %}
+
+{% block contenido %}
+  <section class="panel green_border horizontal_border_2">
+    <div class="block-web">
+      <div class="header">
+        <h3 class="content-header">Editar Servicio/ <b>{{ a}}</b> </h3>
+      </div>
+        <form  action="" method="post">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+        <ul><label > Codigo De Servicio:</label></ul>
+        <ul>{{ form.Codigo_servicio}}</ul>
+        {% if form.Codigo_servicio.errors %}
+          {% for error in form.Codigo_servicio.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+        <ul><label > Nombre De Servicio:</label></ul>
+        <ul>{{ form.nombre}}</ul>
+        {% if form.nombre.errors %}
+          {% for error in form.nombre.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+            <ul><input type="submit" name="name" class="btn btn-primary" value="Guardar"></ul>
+          </form>
+  </div>
+  </section>
+{% endblock %}

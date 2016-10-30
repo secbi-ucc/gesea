@@ -1,0 +1,19 @@
+{% extends "core/base_admin.html" %}
+
+{% block contenido %}
+  <section class="panel green_border horizontal_border_2">
+    <div class="block-web">
+      <div class="header">
+        <h3 class="content-header">Añadir Nuevo Servicio</h3>
+      </div>
+      <form  action="" method="post">
+        {% csrf_token %}
+          <ul><label> Codigo De Servicio</label></ul>
+          <ul>{{form_servicio.Codigo_servicio}}</ul>
+          <ul><label> Nombre De Servicio</label></ul>
+          <ul>{{form_servicio.nombre}}</ul>
+          <ul><input type="submit" name="name" class="btn btn-primary" value="Guardar"></ul>
+      </form>
+    </div>
+  </section>
+{% endblock %}

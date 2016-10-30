@@ -1,0 +1,19 @@
+{% extends "core/base_admin.html" %}
+
+{% block contenido %}
+  <section class="panel green_border horizontal_border_2">
+    <div class="block-web">
+      <div class="header">
+        <h3 class="content-header">Añadir Nuevo Tipo De Actividad</h3>
+      </div>
+      <form  action="" method="post">
+        {% csrf_token %}
+          <ul><label> Codigo Tipo De Actividad</label></ul>
+          <ul>{{form_tipoActividad.Codigo_tipoActividad}}</ul>
+          <ul><label> Nombre Tipo De Actividad</label></ul>
+          <ul>{{form_tipoActividad.nombre}}</ul>
+          <ul><input type="submit" name="name" class="btn btn-primary" value="Guardar"></ul>
+      </form>
+    </div>
+  </section>
+{% endblock %}

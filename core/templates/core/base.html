@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -54,7 +53,17 @@
 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Actividades</a></li>
+                      <li class="dropdown">
+                          <a href="{% url "actividades-lista"%}" class="dropdown-toggle" data-toggle="dropdown">Actividades<i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="{% url "servicios-lista"%}">Lista Servicios</a></li>
+                              <li><a href="{% url "servicio-nuevo"%}">Nuevo Servicio</a></li>
+                              <li><a href="{% url "tipoactividades-lista"%}">Lista Tipo Actividad</a></li>
+                              <li><a href="{% url "tipoactividades-nuevo"%}">Nuevo Tipo Actividad</a></li>
+                              <li><a href="{% url "actividades-lista"%}">Lista Actividad</a></li>
+                              <li><a href="{% url "actividades-nueva"%}">Nueva Actividad</a></li>
+                          </ul>
+                      </li>
                         <li><a href="about-us.html">Profesores</a></li>
                         <li><a href="services.html">Programacion</a></li>
                         <li><a href="portfolio.html">Inscripcion</a></li>

@@ -1,14 +1,27 @@
-{% extends "core/base.html" %}
-
+{% extends "core/base_admin.html" %}
 
 {% block contenido %}
-
+<section class="panel green_border horizontal_border_2">
+  <div class="block-web">
+    <div class="header">
+      <h3 class="content-header">Añadir Nueva Actividad</h3>
+    </div>
 <form  action="" method="post">
   {% csrf_token %}
-  {{form_actividad.as_ul}}
-  <input type="submit" name="name" value="Guardar">
-
+  <ul>Codigo Actividad</ul>
+  <ul>{{form_actividad.Codigo_actividad}}</ul>
+  <ul>Servicio</ul>
+  <ul>{{form_actividad.servicio}}</ul>
+  <ul>Tipo De Actividad</ul>
+  <ul>{{form_actividad.tipo_actividad}}</ul>
+  <ul>Estado Actividad</ul>
+  <ul>{{form_actividad.Estado_actividad}}</ul>
+  <ul>Cupo Actividad</ul>
+  <ul>{{form_actividad.Cupo_Actividad}}</ul>
+  <ul>  <input class="btn btn-primary btn-lg" type="submit" name="name" value="Guardar">
+    <a href="{% url 'actividades-lista' %}" class="btn btn-default navbar-btn">Cancelar</a>
+  </ul>
 </form>
-
-
+</div>
+</section>
 {% endblock %}
