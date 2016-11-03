@@ -1,41 +1,37 @@
-{% extends "core/base.html" %}
+{% extends "core/base_admin.html" %}
 
 {% block contenido %}
+<section class="panel green_border horizontal_border_2">
+  <div class="block-web">
+    <div class="header">
+      <h3 class="content-header">Añadir Nuevo Profesor</h3>
+    </div>
+    <form  action="" method="post">
+      <br />
+        {% csrf_token %}
+        <ul>Nombre</ul>
+        <ul>{{ user_form.first_name }}</ul>
+        <ul>Apellido</ul>
+        <ul>{{ user_form.last_name }}</ul>
+        <ul>Correo Electronico</ul>
+        <ul>{{ user_form.email }}</ul>
+        <ul>Nombre De Usuario</ul>
+        <ul>{{ user_form.username }}</ul>
+        <ul>Contraseña</ul>
+        <ul>{{ user_form.password }}</ul>
+        <ul>Id Ucc</ul>
+        <ul>{{ profile_form.id_ucc }}</ul>
+        <ul>Documento De Identificacion</ul>
+        <ul>{{ profile_form.Identificacion }}</ul>
+        <ul>Estado</ul>
+        <ul>{{ profile_form.estado }}</ul>
 
-<h1> Agregar profesor</h1>
-<br></br>
-<table class="table table-inverse">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Nombre del profesor</th>
-      <th>Codigo del profesor</th>
-      <th>Actividad asignada</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-<br></br>
-<button type="button" class="btn btn-primary btn-lg active">Agregar</button>
-<button type="button" class="btn btn-default btn-lg active">Modificar</button>
+          <ul><input class="btn btn-primary" type="submit" name="name" value="Guardar">
+        <a href="{% url 'Lista-profesor' %}" class="btn btn-default navbar-btn">Cancelar</a>
+      </ul>
+    </form>
+  </div>
+  </section>
+
 
 {% endblock %}

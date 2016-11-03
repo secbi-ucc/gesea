@@ -8,8 +8,8 @@ class Profesor(models.Model):
         ('INACTIVO', 'Inactivo'),
     )
     user = models.OneToOneField(User)
-    id_ucc = models.PositiveSmallIntegerField(primary_key=True)
-    Identificacion = models.PositiveSmallIntegerField()
+    id_ucc = models.IntegerField(primary_key=True)
+    Identificacion = models.IntegerField(unique=True)
     estado = models.CharField(max_length=20, choices=ESTADOS_PROFESOR, default='ACTIVO')
 
     def __unicode__(self):

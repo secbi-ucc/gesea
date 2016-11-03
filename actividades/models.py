@@ -7,7 +7,7 @@ class Servicio(models.Model):
         ('PATRIMONIO CULTURAL', 'Patrimonio cultural'),
         ('ORIENTACION Y ACOMPANAMIENTO', 'Orientacion y acompanamiento'),
     )
-    Codigo_servicio = models.CharField(max_length=10)
+    Codigo_servicio = models.CharField(max_length=10,unique=True)
     nombre = models.CharField(max_length=50, choices=NOMBRES_SERVICIOS)
 
     def __unicode__(self):
@@ -34,7 +34,7 @@ class TipoActividad(models.Model):
         ('TORNEO INTERNO MICRO', 'Torneo Interno Micro'),
         ('VOLEIBOL', 'Voleibol Masc Y Fem'),
     )
-    Codigo_tipoActividad = models.CharField(max_length=10)
+    Codigo_tipoActividad = models.CharField(max_length=10,unique=True)
     nombre = models.CharField(max_length=50, choices=TIPOS_ACTIVIDADES)
 
     def __unicode__(self):
@@ -47,7 +47,7 @@ class Actividad(models.Model):
         ('CERRADA', 'Cerrada'),
     )
     servicio =  models.ForeignKey(Servicio)
-    Codigo_actividad = models.CharField(max_length=10)
+    Codigo_actividad = models.CharField(max_length=10,unique=True)
     tipo_actividad = models.ForeignKey(TipoActividad)
     Estado_actividad =  models.CharField(max_length=30, choices=ESTADOS_ACTIVIDAD, default='ABIERTA')
     Cupo_Actividad = models.IntegerField(max_length = 5)

@@ -31,7 +31,6 @@ def nueva_actividad(request):
 
     if request.method == "POST":
         form_actividad = ActividadForm(request.POST)
-
         if form_actividad.is_valid():
             form_actividad.save()
             return render(request, "actividades/nueva_actividad_mesaje.html")

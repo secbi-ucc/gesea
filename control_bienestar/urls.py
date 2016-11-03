@@ -35,8 +35,13 @@ urlpatterns = patterns('',
     url(r'^inscripcion/forms/inscripcionesf/$', 'inscripcion.views.inscripcion_forms', name='forms-inscripcion'),
     url(r'^inscripcion/estudianteslis/$', 'inscripcion.views.estudianteslis', name='lista_estudiantes'),
     url(r'^inscripcion/forms/usuario/$', 'inscripcion.views.agregar_usuario', name='agregar:usuario'),
-    url(r'^profesor/profesoragr/$', 'profesor.views.agregar_prof', name='agregar_profesor'),
-    url(r'^profesor/forms/profesorf/$', 'profesor.views.profesor_forms', name='forms_profesor'),
+    #urls profesor
+    url(r'^profesor/nuevo/$', 'profesor.views.agregar_profesor', name='agregar-profesor'),
+    url(r'^profesor/lista/$', 'profesor.views.lista_profesores', name='Lista-profesor'),
+    url(r'^Profesor/detalle/(?P<id_ucc>\d+)', 'profesor.views.detalle_profesor', name='profesor-detalle'),
+    url(r'^Profesor/editar/(?P<id_ucc>\d+)', 'profesor.views.editar_profesor', name='profesor-editar'),
+
+    #Urls Programacion
     url(r'^programacion/dia$', 'programacion.views.dia_actividad', name='actividad-dia'),
     url(r'^programacion/horario$', 'programacion.views.horario_actividad', name='actividad-horario'),
     url(r'^programacion/lugar$', 'programacion.views.lugar_actividad', name='actividad-lugar'),
