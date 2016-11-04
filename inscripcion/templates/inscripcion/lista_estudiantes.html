@@ -1,43 +1,44 @@
-{% extends "core/base.html" %}
+{% extends "core/base_admin.html" %}
+
 
 {% block contenido %}
 
-<h1> Lista de estudiantes </h1>
-
-<br></br>
-
-<table class="table table-inverse">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Nombre</th>
-      <th>ID</th>
-      <th>Actividad</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-<br></br>
-<button type="button" class="btn btn-primary btn-lg active">Agregar</button>
-<button type="button" class="btn btn-default btn-lg active">Modificar</button>
+<a href="{% url 'estudiante-nuevo' %}" class="btn btn-default navbar-btn">Agregar Estudiante</a>
+<section class="panel green_border horizontal_border_2">
+  <div class="block-web">
+    <div class="header">
+      <h3 class="content-header">Lista De Estudiantes {{b}}</h3>
+    </div>
+    <table class="table table-striped table-hover ">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Codigo </th>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Facultad</th>
+        <th>Semestre</th>
+        <th>Estado</th>
+        <th>Modificar</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in a %}
+      <tr>
+        <td><a href="{% url "estudiantes-detalle" i.id  %}">{{i.id}}</a></td>
+        <td>{{i.Codigo_estudiante}}</td>
+        <td>{{i.nombre}}</td>
+        <td>{{i}}</td>
+        <td>{{i.facultad}}</td>
+        <td>{{i.semestre}}</td>
+        <td>{{i.Estado}}</td>
+        <td><a href="{% url "estudiantes-editar" i.id  %}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
+      </tr>
+      {% endfor%}
+    </tbody>
+  </table>
+    </form>
+  </div>
+</section>
 
 {% endblock %}

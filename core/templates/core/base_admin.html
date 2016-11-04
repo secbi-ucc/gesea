@@ -115,14 +115,12 @@
               <li> <a href="{% url "actividades-nueva"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b> Añadir Actividad</b> </a> </li>
             </ul>
           </li>
-          <li> <a href="javascript:void(0);"> <i class="fa fa-group"></i>Estudiantes <span class="plus"><i class="fa fa-plus"></i></span></a>
-            <ul>
-              <li> <a href="components.html"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Nuevo Estudiante</b> </a> </li>
-            </ul>
-          </li>
           <li> <a href="javascript:void(0);"> <i class="fa fa-edit"></i> Inscripción <span class="plus"><i class="fa fa-plus"></i></span></a>
             <ul>
-              <li> <a href="components.html"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Nueva Inscripción</b> </a> </li>
+              <li> <a href="{% url "lista-inscripcion"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Nueva Inscripcion</b> </a> </li>
+              <li> <a href="{% url "lista-estudiantes"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Lista Inscripción</b> </a> </li>
+              <li> <a href="{% url "estudiante-nuevo"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Nuevo Estudiante</b> </a> </li>
+              <li> <a href="{% url "lista-estudiantes"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Lista Estudiante</b> </a> </li>
             </ul>
           </li>
           <li> <a href="javascript:void(0);"> <i class="fa fa-user"></i> Profesor <span class="plus"><i class="fa fa-plus"></i></span></a>

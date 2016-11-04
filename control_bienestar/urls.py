@@ -33,7 +33,10 @@ urlpatterns = patterns('',
     #urls inscripciones
     url(r'^inscripcion/inscripciones/$', 'inscripcion.views.inscripcion_lis', name='lista-inscripcion'),
     url(r'^inscripcion/forms/inscripcionesf/$', 'inscripcion.views.inscripcion_forms', name='forms-inscripcion'),
-    url(r'^inscripcion/estudianteslis/$', 'inscripcion.views.estudianteslis', name='lista_estudiantes'),
+    url(r'^inscripcion/estudianteslis/$', 'inscripcion.views.estudianteslis', name='lista-estudiantes'),
+    url(r'^inscripcion/nuevo/$', 'inscripcion.views.agregar_estudiante', name='estudiante-nuevo'),
+    url(r'^estudiantes/editar/(?P<id_Estudiantes>\d+)', 'inscripcion.views.editar_estudiante', name='estudiantes-editar'),
+    url(r'^inscripcion/detalle/(?P<id_Estudiantes>\d+)', 'inscripcion.views.detalle_estudiante', name='estudiantes-detalle'),
     url(r'^inscripcion/forms/usuario/$', 'inscripcion.views.agregar_usuario', name='agregar:usuario'),
     #urls profesor
     url(r'^profesor/nuevo/$', 'profesor.views.agregar_profesor', name='agregar-profesor'),

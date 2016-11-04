@@ -1,0 +1,76 @@
+{% extends "core/base_admin.html" %}
+
+{% block contenido %}
+  <section class="panel green_border horizontal_border_2">
+    <div class="block-web">
+      <div class="header">
+        <h3 class="content-header">Editar Estudiante/ <b>{{a}}</b> </h3>
+      </div>
+        <form  action="" method="post">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+        <ul><label > Codigo :</label></ul>
+        <ul>{{ form.Codigo_estudiante}}</ul>
+        {% if form.Codigo_estudiante.errors %}
+          {% for error in form.Codigo_estudiante.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+        <ul><label > Nombre:</label></ul>
+        <ul>{{ form.nombre}}</ul>
+        {% if form.nombre.errors %}
+          {% for error in form.nombre.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+        <ul><label > Apellidos:</label></ul>
+        <ul>{{ form.apellidos}}</ul>
+        {% if form.apellidos.errors %}
+          {% for error in form.apellidos.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+        <ul><label > Facultad:</label></ul>
+        <ul>{{ form.facultad}}</ul>
+        {% if form.facultad.errors %}
+          {% for error in form.facultad.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+        <ul><label > Semestre:</label></ul>
+        <ul>{{ form.semestre}}</ul>
+        {% if form.semestre.errors %}
+          {% for error in form.semestre.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+				<ul><label > Estado:</label></ul>
+        <ul>{{ form.Estado}}</ul>
+        {% if form.Estado.errors %}
+          {% for error in form.Estado.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+            <ul><input type="submit" name="name" class="btn btn-primary" value="Guardar"></ul>
+          </form>
+  </div>
+  </section>
+{% endblock %}
