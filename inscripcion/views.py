@@ -6,29 +6,30 @@ from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
-
+@login_required ( login_url = '/login/' )
 def inscripcion_lis (request):
     a = Estudiantes.objects.all()
     return render(request, 'inscripcion/inscripcion_nueva.html', {'a':a})
-
+@login_required ( login_url = '/login/' )
 def inscripcion_forms(request):
 
     return render(request, 'inscripcion/forms/inscripcionesf.html',)
-
+@login_required ( login_url = '/login/' )
 def estudianteslis(request):
     a = Estudiantes.objects.all()
 
     return render(request, 'inscripcion/lista_estudiantes.html', {'a':a})
-
+@login_required ( login_url = '/login/' )
 def agregar_usuario(request):
 
     return render (request, 'inscripcion/forms/agregar_usuario.html',)
+@login_required ( login_url = '/login/' )
 def detalle_estudiante(request, id_Estudiantes):
 
     b = get_object_or_404(Estudiantes, pk=id_Estudiantes)
 
     return render(request, 'inscripcion/detalle_estudiante.html', {'b':b})
-
+@login_required ( login_url = '/login/' )
 def agregar_estudiante(request):
 
     form_estudiante = EstudiantesForm()
@@ -38,10 +39,10 @@ def agregar_estudiante(request):
 
         if form_estudiante.is_valid():
             form_estudiante.save()
-            return render(request, "inscripcion/agregar_estudiante_mensaje.html")
+            return render(request, "inscripcion/lista_estudiantes.html")
 
     return render(request,"inscripcion/agregar_estudiante_form.html", {"form_estudiante":form_estudiante})
-
+@login_required ( login_url = '/login/' )
 def editar_estudiante(request, id_Estudiantes):
     instance = get_object_or_404(Estudiantes, pk=id_Estudiantes)
     a = instance

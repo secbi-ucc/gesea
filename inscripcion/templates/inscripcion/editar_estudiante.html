@@ -4,12 +4,12 @@
   <section class="panel green_border horizontal_border_2">
     <div class="block-web">
       <div class="header">
-        <h3 class="content-header">Editar Estudiante/ <b>{{a}}</b> </h3>
+        <h3 class="content-header">Editar Estudiante/ <b>{{ a}}</b> </h3>
       </div>
         <form  action="" method="post">
           {% csrf_token %}
           {{ form.non_field_errors }}
-        <ul><label > Codigo :</label></ul>
+        <ul><label > Codigo:</label></ul>
         <ul>{{ form.Codigo_estudiante}}</ul>
         {% if form.Codigo_estudiante.errors %}
           {% for error in form.Codigo_estudiante.errors %}
@@ -19,7 +19,7 @@
           {% endfor %}
         {% endif %}
 
-        <ul><label > Nombre:</label></ul>
+        <ul><label > Nombres:</label></ul>
         <ul>{{ form.nombre}}</ul>
         {% if form.nombre.errors %}
           {% for error in form.nombre.errors %}
@@ -39,7 +39,17 @@
           {% endfor %}
         {% endif %}
 
-        <ul><label > Facultad:</label></ul>
+        <ul><label > Sexo:</label></ul>
+        <ul>{{ form.sexo}}</ul>
+        {% if form.sexo.errors %}
+          {% for error in form.sexo.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+        <ul><label >Facultad:</label></ul>
         <ul>{{ form.facultad}}</ul>
         {% if form.facultad.errors %}
           {% for error in form.facultad.errors %}
@@ -49,7 +59,7 @@
           {% endfor %}
         {% endif %}
 
-        <ul><label > Semestre:</label></ul>
+        <ul><label >Semestre:</label></ul>
         <ul>{{ form.semestre}}</ul>
         {% if form.semestre.errors %}
           {% for error in form.semestre.errors %}
@@ -59,10 +69,40 @@
           {% endfor %}
         {% endif %}
 
-				<ul><label > Estado:</label></ul>
+        <ul><label >Horas:</label></ul>
+        <ul>{{ form.Horas_estudiante}}</ul>
+        {% if form.Horas_estudiante.errors %}
+          {% for error in form.Horas_estudiante.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+        <ul><label > Estado:</label></ul>
         <ul>{{ form.Estado}}</ul>
         {% if form.Estado.errors %}
           {% for error in form.Estado.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+        <ul><label > Telefono:</label></ul>
+        <ul>{{ form.telefono}}</ul>
+        {% if form.telefono.errors %}
+          {% for error in form.telefono.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+        <ul><label >Correo:</label></ul>
+        <ul>{{ form.correo}}</ul>
+        {% if form.correo.errors %}
+          {% for error in form.correo.errors %}
             <small class="error">
               {{ error|escape }}
             </small>

@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from programacion.models import Programacion
+from actividades.models import Actividad
 
 
 # Create your models here.
@@ -38,13 +39,13 @@ class Estudiantes(models.Model):
         ('INGENIERIA DE SISTEMAS', 'Ingenieria de sistemas'),
         ('PSICOLOGIA', 'Psicologia'),
     )
-    Codigo_estudiante = models.CharField(max_length=10)
+    Codigo_estudiante = models.CharField(max_length=10, unique=True)
     nombre = models.CharField(max_length=30)
     apellidos = models.CharField(max_length=30)
     semestre = models.CharField(max_length=30 , choices=SEMESTRE_ESTUDIANTE)
     sexo = models.CharField(max_length=30, choices=GENERO_ESTUDIANTE)
     facultad = models.CharField(max_length=30, choices=FACULTAD_ESTUDIANTE)
-    correo = models.CharField(max_length=30)
+    correo = models.CharField(max_length=30, unique=True)
     telefono = models.CharField(max_length=30)
     Horas_estudiante = models.IntegerField()
     inscripcion = models.ManyToManyField(Inscripcion)
