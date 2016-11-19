@@ -12,16 +12,7 @@ class Horario(models.Model):
 
 
 class Lugar(models.Model):
-    Lugar_Actividad = (
-        ('CANCHAS DEPORTIVAS', 'Canchas Deportiva'),
-        ('TEATRINO', 'Teatrino'),
-        ('CAFETERIA', 'Cafeteria'),
-        ('AUDITORIO', 'Auditorio'),
-        ('7MO PISO', '7mo Piso'),
-        ('1MO PISO', '1mo Piso'),
-        ('OTRO', 'Otro'),
-    )
-    NombreLugar = models.CharField(max_length=30, choices=Lugar_Actividad)
+    NombreLugar = models.CharField(max_length=30)
 
     def __unicode__(self):
         return unicode(self.NombreLugar)
@@ -53,7 +44,7 @@ class Programacion(models.Model):
         ('OTRO', 'Otro'),
     )
     TipodeParticipacion = models.CharField(max_length=30, choices=Tipo_participacion)
-    profesor = models.ForeignKey(Profesor)
+    profesor = models.ForeignKey(Profesor, null=True, blank=True)
     lugarActividad = models.ForeignKey(Lugar)
     Servicio = models.ForeignKey(Servicio)
     actividad = models.ForeignKey(Actividad)

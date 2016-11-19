@@ -7,8 +7,8 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('actividades', '0001_initial'),
-        ('profesor', '0001_initial'),
+        ('actividades', '__first__'),
+        ('profesor', '__first__'),
     ]
 
     operations = [
@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
             name='Lugar',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('NombreLugar', models.CharField(max_length=30, choices=[(b'CANCHAS DEPORTIVAS', b'Canchas Deportiva'), (b'TEATRINO', b'Teatrino'), (b'CAFETERIA', b'Cafeteria'), (b'AUDITORIO', b'Auditorio'), (b'7MO PISO', b'7mo Piso'), (b'1MO PISO', b'1mo Piso'), (b'OTRO', b'Otro')])),
+                ('NombreLugar', models.CharField(max_length=30)),
             ],
             options={
             },
@@ -54,7 +54,7 @@ class Migration(migrations.Migration):
                 ('Servicio', models.ForeignKey(to='actividades.Servicio')),
                 ('actividad', models.ForeignKey(to='actividades.Actividad')),
                 ('lugarActividad', models.ForeignKey(to='programacion.Lugar')),
-                ('profesor', models.ForeignKey(to='profesor.Profesor')),
+                ('profesor', models.ForeignKey(blank=True, to='profesor.Profesor', null=True)),
             ],
             options={
             },

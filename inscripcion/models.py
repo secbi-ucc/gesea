@@ -39,7 +39,7 @@ class Estudiantes(models.Model):
         ('INGENIERIA DE SISTEMAS', 'Ingenieria de sistemas'),
         ('PSICOLOGIA', 'Psicologia'),
     )
-    Codigo_estudiante = models.CharField(max_length=10, unique=True)
+    Codigo_estudiante = models.CharField(max_length=10, primary_key=True)
     nombre = models.CharField(max_length=30)
     apellidos = models.CharField(max_length=30)
     semestre = models.CharField(max_length=30 , choices=SEMESTRE_ESTUDIANTE)

@@ -5,9 +5,7 @@ from django.contrib.auth import views as autenticacion
 
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'control_bienestar.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+
     url(r'^$', 'core.views.inicio', name='inicio'),
     url(r'^no-permitido/', 'core.views.no_permitido', name='no-permitido'),
     url(r'^admin/', include(admin.site.urls)),
@@ -31,7 +29,7 @@ urlpatterns = patterns('',
     url(r'^actividades/tipo/editar/(?P<id_tipoactividad>\d+)', 'actividades.views.editar_tipoActividad', name='tipoactividad-editar'),
     url(r'^actividades/tipo/eliminar/(?P<id_tipoactividad>\d+)', 'actividades.views.eliminar_tipoActividad', name='tipoactividad-eliminar'),
     #urls inscripciones
-    url(r'^inscripcion/inscripciones/$', 'inscripcion.views.inscripcion_lis', name='lista-inscripcion'),
+    url(r'^inscripcion/$', 'inscripcion.views.inscripcion_lis', name='lista-inscripcion'),
     url(r'^inscripcion/forms/inscripcionesf/$', 'inscripcion.views.inscripcion_forms', name='forms-inscripcion'),
     url(r'^inscripcion/estudianteslis/$', 'inscripcion.views.estudianteslis', name='lista-estudiantes'),
     url(r'^inscripcion/nuevo/$', 'inscripcion.views.agregar_estudiante', name='estudiante-nuevo'),
@@ -39,26 +37,28 @@ urlpatterns = patterns('',
     url(r'^inscripcion/detalle/(?P<id_Estudiantes>\d+)', 'inscripcion.views.detalle_estudiante', name='estudiantes-detalle'),
     url(r'^inscripcion/forms/usuario/$', 'inscripcion.views.agregar_usuario', name='agregar:usuario'),
     #urls profesor
-    url(r'^profesor/nuevo/$', 'profesor.views.agregar_profesor', name='agregar-profesor'),
-    url(r'^profesor/lista/$', 'profesor.views.lista_profesores', name='Lista-profesor'),
+    url(r'^Profesor/nuevo/$', 'profesor.views.agregar_profesor', name='agregar-profesor'),
+    url(r'^profesor/$', 'profesor.views.lista_profesores', name='Lista-profesor'),
     url(r'^Profesor/detalle/(?P<id_ucc>\d+)', 'profesor.views.detalle_profesor', name='profesor-detalle'),
     url(r'^Profesor/editar/(?P<id_ucc>\d+)', 'profesor.views.editar_profesor', name='profesor-editar'),
-
     #Urls Programacion
-    url(r'^programacion/dia$', 'programacion.views.dia_actividad', name='actividad-dia'),
-    url(r'^programacion/horario$', 'programacion.views.horario_actividad', name='actividad-horario'),
-    url(r'^programacion/lugar$', 'programacion.views.lugar_actividad', name='actividad-lugar'),
-    url(r'^programacion/programacion$', 'programacion.views.programacion_actividad', name='actividades-programada'),
-    url(r'^programacion/forms/programacion$', 'programacion.views.programacion_form', name='actividad-programacion'),
-    url(r'^programacion/forms/lugar$', 'programacion.views.lugar_form', name='form-lugar'),
-    url(r'^programacion/forms/horario$', 'programacion.views.horario_form', name='form-horario'),
-    url(r'^programacion/forms/dia$', 'programacion.views.dia_form', name='form-dia'),
-
-
-
-
-
-
+    url(r'^horario/$', 'programacion.views.horario_lista', name='horario-lista'),
+    url(r'^horario/eliminar/(?P<id_horario>\d+)', 'programacion.views.horario_eliminar', name='horario-eliminar'),
+    url(r'^horario/detalle/(?P<id_horario>\d+)', 'programacion.views.horario_detalle', name='horario-detalle'),
+    url(r'^dias/$', 'programacion.views.dias_lista', name='dias-lista'),
+    url(r'^dias/detalle/(?P<id_dia>\d+)', 'programacion.views.dia_detalle', name='dia-detalle'),
+    url(r'^dia/eliminar/(?P<id_dia>\d+)', 'programacion.views.dia_eliminar', name='dia-eliminar'),
+    url(r'^dia/editar/(?P<id_dia>\d+)', 'programacion.views.dia_editar', name='dia-editar'),
+    url(r'^dia/nuevo$', 'programacion.views.dia_nuevo', name='dia-nuevo'),
+    url(r'^programacion/lista$', 'programacion.views.programacion_lista', name='programacion-lista'),
+    url(r'^programacion/nueva$', 'programacion.views.programacion_nueva', name='programacion-nueva'),
+    url(r'^prgramacion/eliminar/(?P<id_programacion>\d+)', 'programacion.views.programacion_eliminar', name='programacion-eliminar'),
+    url(r'^programacion/detalle/(?P<id_programacion>\d+)', 'programacion.views.programacion_detalle', name='programacion-detalle'),
+    url(r'^Lugar/$', 'programacion.views.lugares_lista', name='lugar-lista'),
+    url(r'^Lugar/detalle/(?P<id_lugar>\d+)', 'programacion.views.lugar_detalle', name='lugar-detalle'),
+    url(r'^Lugar/editar/(?P<id_lugar>\d+)', 'programacion.views.lugar_editar', name='lugar-editar'),
+    url(r'^Lugar/eliminar/(?P<id_lugar>\d+)', 'programacion.views.lugar_eliminar', name='lugar-eliminar'),
+    url(r'^Lugar/nuevo/$', 'programacion.views.lugar_nuevo', name='lugar-nuevo'),
 
 
 

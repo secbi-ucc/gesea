@@ -1,0 +1,21 @@
+{% extends "core/base_admin.html" %}
+
+{% block contenido %}
+ <section class="panel green_border horizontal_border_2">
+   <div class="block-web">
+     <div class="header">
+       <h3 class="content-header">Añadir Nuevo Dia</h3>
+     </div>
+     <form  action="" method="post">
+       {% csrf_token %}
+         <ul><label> Dia</label></ul>
+         <ul>{{form_dia.Dia_Actividad}}</ul>
+         <ul><label> Horario</label></ul>
+         <ul>{{form_dia.Horario}}</ul>
+         <ul><input type="submit" name="name" class="btn btn-primary" value="Guardar">
+           <a href="{% url "lugar-lista" %}" class="btn btn-default navbar-btn">Cancelar</a>
+         </ul>
+     </form>
+   </div>
+ </section>
+{% endblock %}

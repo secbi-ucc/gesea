@@ -1,0 +1,35 @@
+{% extends "core/base_admin.html" %}
+{% block contenido %}
+<div class="col-md-12">
+          <div class="block-web">
+            <div class="header">
+              <h3 class="content-header">Detalle Dia/ <b>{{b}}</b></h3>
+            </div>
+            <div class="porlets-content">
+              <div style="float: right; margin-bottom: 10px">
+                <label style="display: inline-block; margin-right: 50px">
+              </div>
+              <table id="user" class="table table-bordered table-striped" style="clear: both">
+                <tbody>
+                  <tr>
+                    <td width="30%">Id</td>
+                    <td width="65%"><a href="{% url "dia-detalle" b.id %}">{{b.id}}</a></td>
+                  </tr>
+                  <tr>
+                    <td>Dia</td>
+                    <td> {{b.Dia_Actividad}}</td>
+                  </tr>
+                  <tr>
+                    <td>Horario</td>
+                    <td>{{b.Horario.Hora_Inicio}}-{{b.Horario.Hora_Final}}</td>
+                  </tr>
+                  </tr>
+                  <tr>
+                </tbody>
+              </table>
+            </div><!--/porlets-content-->
+            <a href="{% url "dia-editar" b.id %}" id="ggg-graphify-button-bar" >Editar</a>
+            <a href="{% url "dia-eliminar" b.id %}" id="ggg-graphify-button-linear" >Eliminar</a>
+          </div><!--/block-web-->
+        </div>
+{% endblock %}

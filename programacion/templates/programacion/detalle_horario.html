@@ -1,0 +1,34 @@
+{% extends "core/base_admin.html" %}
+{% block contenido %}
+<div class="col-md-12">
+          <div class="block-web">
+            <div class="header">
+              <h3 class="content-header">Detalle Horario/ <b>{{b.Hora_Inicio}}-{{b.Hora_Final}}</b></h3>
+            </div>
+            <div class="porlets-content">
+              <div style="float: right; margin-bottom: 10px">
+                <label style="display: inline-block; margin-right: 50px">
+              </div>
+              <table id="user" class="table table-bordered table-striped" style="clear: both">
+                <tbody>
+                  <tr>
+                    <td width="30%">Id</td>
+                    <td width="65%"><a href="{% url "lugar-detalle" b.id %}">{{b.id}}</a></td>
+                  </tr>
+                  <tr>
+                    <td>Hora Inicio</td>
+                    <td> {{b.Hora_Inicio}}</td>
+                  </tr>
+                  <tr>
+                    <td>Hora Final</td>
+                    <td> {{b.Hora_Final}}</td>
+                  </tr>
+                  <tr>
+                </tbody>
+              </table>
+            </div><!--/porlets-content-->
+            <a href="{% url "lugar-editar" b.id %}" id="ggg-graphify-button-bar" >Editar</a>
+            <a href="{% url "horario-eliminar" b.id %}" id="ggg-graphify-button-linear" >Eliminar</a>
+          </div><!--/block-web-->
+        </div>
+{% endblock %}

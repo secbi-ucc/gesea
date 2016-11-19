@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'programacion',
     'core',
     'inscripcion',
+    'bootstrap4_datetime'
 )
 
 MIDDLEWARE_CLASSES = (

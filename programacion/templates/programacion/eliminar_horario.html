@@ -1,0 +1,40 @@
+{% extends "core/base_admin.html" %}
+{% block contenido %}
+<div class="col-md-12">
+          <div class="block-web">
+            <div class="header">
+              <h3 class="content-header">Eliminar Horario/ <b>{{a.Hora_Inicio}}-{{a.Hora_Final}}</b></h3>
+            </div>
+            <div class="porlets-content">
+              <div style="float: right; margin-bottom: 10px">
+                <label style="display: inline-block; margin-right: 50px">
+              </div>
+              <table id="user" class="table table-bordered table-striped" style="clear: both">
+                <tbody>
+                  <tr>
+                    <td width="30%">Id</td>
+                    <td width="65%"><a href="{% url "lugar-detalle" a.id %}">{{a.id}}</a></td>
+                  </tr>
+                  <tr>
+                    <td>Hora Inicio</td>
+                    <td> {{a.Hora_Inicio}}</td>
+                  </tr>
+                  <tr>
+                    <td>Hora Final</td>
+                    <td> {{a.Hora_Final}}</td>
+                  </tr>
+                  <tr>
+                </tbody>
+              </table>
+            </div><!--/porlets-content-->
+            <h3>¿Esta Seguro Que Desea Eliminar Este Horario?</h3>
+            <form  action="" method="post">
+                {% csrf_token %}
+              <input type="submit" name="name" class="btn btn-primary" value="Aceptar">
+              <a href="{% url "lugar-lista" %}" class="btn btn-default navbar-btn">Cancelar</a>
+            </form>
+          </div>
+        </section>
+          </div><!--/block-web-->
+        </div>
+{% endblock %}

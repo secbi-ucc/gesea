@@ -10,7 +10,7 @@ class Inscripciones (admin.ModelAdmin):
 		model = Inscripcion
 
 class Estudiante (admin.ModelAdmin):
-	list_display = ['id','Codigo_estudiante','Horas_estudiante','nombre','apellidos','semestre','sexo','facultad','correo','Estado','telefono']
+	list_display = ['Codigo_estudiante','Horas_estudiante','nombre','apellidos','semestre','sexo','facultad','correo','Estado','telefono']
 	class Meta:
 		model = Estudiantes
 

@@ -12,7 +12,9 @@
           <ul>{{form_servicio.Codigo_servicio}}</ul>
           <ul><label> Nombre De Servicio</label></ul>
           <ul>{{form_servicio.nombre}}</ul>
-          <ul><input type="submit" name="name" class="btn btn-primary" value="Guardar"></ul>
+          <ul><input type="submit" name="name" class="btn btn-primary" value="Guardar">
+            <a href="{% url 'servicios-lista' %}" class="btn btn-default navbar-btn">Cancelar</a>
+          </ul>
       </form>
     </div>
   </section>

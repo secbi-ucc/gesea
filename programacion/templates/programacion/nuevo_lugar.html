@@ -1,0 +1,19 @@
+{% extends "core/base_admin.html" %}
+
+{% block contenido %}
+ <section class="panel green_border horizontal_border_2">
+   <div class="block-web">
+     <div class="header">
+       <h3 class="content-header">Añadir Nuevo Lugar</h3>
+     </div>
+     <form  action="" method="post">
+       {% csrf_token %}
+         <ul><label> Nombre Lugar</label></ul>
+         <ul>{{form_lugar.NombreLugar}}</ul>
+         <ul><input type="submit" name="name" class="btn btn-primary" value="Guardar">
+           <a href="{% url "lugar-lista" %}" class="btn btn-default navbar-btn">Cancelar</a>
+         </ul>
+     </form>
+   </div>
+ </section>
+{% endblock %}

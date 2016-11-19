@@ -1,10 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>CONTROL-BIENESTAR-UCC</title>
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  <!-- Latest compiled and minified CSS -->
 
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.js"></script>
 <link href="{{STATIC_URL}}Base/css/font-awesome.css" rel="stylesheet" type="text/css" />
 <link href="{{STATIC_URL}}Base/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="{{STATIC_URL}}Base/css/animate.css" rel="stylesheet" type="text/css" />
@@ -21,7 +25,8 @@
     <!--\\\\\\\ header Start \\\\\\-->
     <div class="brand">
       <!--\\\\\\\ brand Start \\\\\\-->
-      <div class="logo" style="display:block"><span class="theme_color">CONTROL</span>BIENESTAR</div>
+      <div class="logo" style="display:
+      block"><span class="theme_color">CONTROL</span>BIENESTAR</div>
       <div class="small_logo" style="display:none"><img src="{{STATIC_URL}}Base/images/s-logo.png" width="50" height="47" alt="s-logo" /> <img src="{{STATIC_URL}}Base/images/r-logo.png" width="122" height="20" alt="r-logo" /></div>
     </div>
     <!--\\\\\\\ brand end \\\\\\-->
@@ -129,15 +134,19 @@
           </li>
           <li> <a href="javascript:void(0);"> <i class="fa  fa-calendar-o"></i> Programación <span class="plus"><i class="fa fa-plus"></i></span> </a>
             <ul>
-              <li> <a href="todo.html"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Horario de Curso</b> </a> </li>
-              <li> <a href="task.html"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Horario de Actividad</b> </a> </li>
-              <li> <a href="notes.html"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Ubicación</b> </a> </li>
-              <li> <a href="media.html"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Nueva Programación</b> </a> </li>
+              <li> <a href="{% url "horario-lista"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Lista Horarios</b> </a> </li>
+              <li> <a href="{% url "programacion-lista"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Nuevo Horario</b> </a> </li>
+              <li> <a href="{% url "lugar-lista"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Lista Lugares</b> </a> </li>
+              <li> <a href="{% url "lugar-nuevo"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Nuevo Lugar</b> </a> </li>
+              <li> <a href="{% url "dias-lista"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Lista De Dias</b> </a> </li>
+              <li> <a href="{% url "dia-nuevo"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Nuevo Dia</b> </a> </li>
+              <li> <a href="{% url "programacion-lista"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Lista Programación</b> </a> </li>
+              <li> <a href="{% url "programacion-nueva"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Nueva Programación</b> </a> </li>
             </ul>
           </li>
           <li> <a href="javascript:void(0);"> <i class="fa fa-files-o"></i> Reportes <span class="plus"><i class="fa fa-plus"></i></span> </a>
             <ul>
-              <li> <a href="inbox.html"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Inbox</b> </a> </li>
+              <li> <a href="{% url "programacion-lista"%}"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Inbox</b> </a> </li>
               <li> <a href="compose.html"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Compose</b> </a> </li>
               <li> <a href="readmail.html"> <span>&nbsp;</span> <i class="fa fa-circle"></i> <b>Read Mail</b> </a> </li>
             </ul>

@@ -1,0 +1,65 @@
+{% extends "core/base_admin.html" %}
+{% block contenido %}
+<div class="col-md-12">
+          <div class="block-web">
+            <div class="header">
+              <h3 class="content-header">Eliminar Programacion/ <b>{{a}}</b> </h3>
+            </div>
+            <div class="porlets-content">
+              <div style="float: right; margin-bottom: 10px">
+                <label style="display: inline-block; margin-right: 50px">
+              </div>
+              <table id="user" class="table table-bordered table-striped" style="clear: both">
+                <tbody>
+                  <tr>
+                    <td width="30%">Id</td>
+                    <td width="65%"><a href="{% url "programacion-detalle" a.id %}">{{a.id}}</a></td>
+                  </tr>
+                  <tr>
+                    <td>Servicio</td>
+                    <td> {{a.Servicio}}</td>
+                  </tr>
+                  <tr>
+                    <td>Actividad</td>
+                    <td> {{a.actividad}}</td>
+                  </tr>
+                  <tr>
+                    <td>Tipo De Participacion</td>
+                    <td>{{a.TipodeParticipacion}}</td>
+                  </tr>
+                  <tr>
+                    <td>Profesor</td>
+                    <td> {{a.profesor}}</td>
+                  </tr>
+                  <tr>
+                    <td>Lugar De Actividad</td>
+                    <td> {{a.lugarActividad}}</td>
+                  </tr>
+                  <tr>
+                    <td>Dias & Horario De Actividad</td>
+                    <td> {% for j in a.Dia_semana.all %}
+                          {{j.Dia_Actividad}}<a>-</a>{{j.Horario.Hora_Inicio}}<a>-</a>{{j.Horario.Hora_Final}}<a>,</a>
+                          {% endfor %}</td>
+                  </tr>
+                  <tr>
+                    <td>Fecha De Inicio De Actividad</td>
+                    <td> {{a.Fecha_Inicio}}</td>
+                  </tr>
+                  <tr>
+                    <td>Fecha De Cierre De Actividad</td>
+                    <td>{{a.Fecha_Final}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!--/porlets-content-->
+            <h3>¿Esta Seguro Que Desea Eliminar Esta Programacion?</h3>
+            <form  action="" method="post">
+                {% csrf_token %}
+              <input type="submit" name="name" class="btn btn-primary" value="Aceptar">
+              <a href="{% url "lugar-lista" %}" class="btn btn-default navbar-btn">Cancelar</a>
+            </form>
+          </div>
+        </section>
+          </div><!--/block-web-->
+        </div>
+{% endblock %}
