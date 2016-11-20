@@ -4,7 +4,7 @@
   <section class="panel green_border horizontal_border_2">
     <div class="block-web">
       <div class="header">
-        <h3 class="content-header">Editar Estudiante/ <b>{{ a}}</b> </h3>
+        <h3 class="content-header">Editar Estudiante/ <b> {{a.nombre}} {{a.apellidos}}</b> </h3>
       </div>
         <form  action="" method="post">
           {% csrf_token %}
@@ -73,6 +73,16 @@
         <ul>{{ form.Horas_estudiante}}</ul>
         {% if form.Horas_estudiante.errors %}
           {% for error in form.Horas_estudiante.errors %}
+            <small class="error">
+              {{ error|escape }}
+            </small>
+          {% endfor %}
+        {% endif %}
+
+        <ul><label >Inscripcion:</label></ul>
+        <ul>{{ form.inscripcion}}</ul>
+        {% if form.inscripcion.errors %}
+          {% for error in form.inscripcion.errors %}
             <small class="error">
               {{ error|escape }}
             </small>

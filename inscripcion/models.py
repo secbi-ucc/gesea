@@ -5,12 +5,10 @@ from actividades.models import Actividad
 
 
 # Create your models here.
-
 class Inscripcion(models.Model):
     actividad = models.ForeignKey(Programacion)
     def __unicode__(self):
         return unicode(self.actividad)
-
 
 class Estudiantes(models.Model):
     ESTADOS_ESTUDIANTE = (
@@ -48,7 +46,7 @@ class Estudiantes(models.Model):
     correo = models.CharField(max_length=30, unique=True)
     telefono = models.CharField(max_length=30)
     Horas_estudiante = models.IntegerField()
-    inscripcion = models.ManyToManyField(Inscripcion)
+    inscripcion = models.ManyToManyField(Inscripcion, null=True, blank=True)
     Estado = models.CharField(max_length=20, choices=ESTADOS_ESTUDIANTE, default='ACTIVO')
 
     def __unicode__(self):

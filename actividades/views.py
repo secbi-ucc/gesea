@@ -38,7 +38,7 @@ def nueva_actividad(request):
     return render(request,"actividades/nueva_actividad_form.html", {"form_actividad":form_actividad})
 
 #metodo para editar una actividad
-@login_required ( login_url = '/login/' )
+@user_passes_test(lambda u: u.is_superuser, login_url='/no-permitido/')
 def editar_actividad(request, id_actividad):
     instance = get_object_or_404(Actividad, pk=id_actividad)
     a = instance
