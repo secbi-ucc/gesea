@@ -8,12 +8,22 @@ from .forms import ServicioForm
 from .forms import TipoActividadForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+#metodo para listar las actividades
 @login_required ( login_url = '/login/' )
 def lista_actividades(request):
+    actividad = Actividad.objects.all()
+    paginator = Paginator(actividad, 25)
+    page = request.GET.get('page')
+    try:
+        a = paginator.page(page)
+    except PageNotAnInteger:
+        a = paginator.page(1)
+    except EmptyPage:
+        a = paginator.page(paginator.num_pages)
 
-    a = Actividad.objects.all()
-    return render(request, 'actividades/lista_actividades.html', {'a':a})
+    return render(request,'actividades/lista_actividades.html', {"a": a})
 
 #metodo para detallar una actividad
 @login_required ( login_url = '/login/' )
@@ -65,8 +75,15 @@ def eliminar_actividad(request, id_actividad):
 
 @login_required ( login_url = '/login/' )
 def lista_tipoActividades(request):
-
-    a = TipoActividad.objects.all()
+    tipoactividad = TipoActividad.objects.all()
+    paginator = Paginator(tipoactividad, 25)
+    page = request.GET.get('page')
+    try:
+        a = paginator.page(page)
+    except PageNotAnInteger:
+        a = paginator.page(1)
+    except EmptyPage:
+        a = paginator.page(paginator.num_pages)
 
     return render(request, 'actividades/lista_tipoActividad.html', {'a':a})
 
@@ -140,8 +157,15 @@ def nuevo_servicio(request):
 #metodo para listar los servicios
 @login_required ( login_url = '/login/' )
 def lista_servicios(request):
-
-    a = Servicio.objects.all()
+    servicios = Servicio.objects.all()
+    paginator = Paginator(servicios, 25)
+    page = request.GET.get('page')
+    try:
+        a = paginator.page(page)
+    except PageNotAnInteger:
+        a = paginator.page(1)
+    except EmptyPage:
+        a = paginator.page(paginator.num_pages)
 
     return render(request, 'actividades/lista_servicios.html', {'a':a})
 

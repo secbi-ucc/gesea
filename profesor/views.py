@@ -5,6 +5,8 @@ from .forms import ProfesorForm
 from .forms import UserForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 
 @user_passes_test(lambda u: u.is_superuser, login_url='/no-permitido/')
 def agregar_profesor(request):
@@ -32,8 +34,15 @@ def agregar_profesor(request):
 #metodo para listar Usuarios Profesores
 @user_passes_test(lambda u: u.is_superuser, login_url='/no-permitido/')
 def lista_profesores(request):
-
-        a = Profesor.objects.all()
+        profesores = Profesor.objects.all()
+        paginator = Paginator(profesores, 25)
+        page = request.GET.get('page')
+        try:
+            a = paginator.page(page)
+        except PageNotAnInteger:
+            a = paginator.page(1)
+        except EmptyPage:
+            a = paginator.page(paginator.num_pages)
         return render(request, 'Profesor/lista_profesores.html', {'a':a})
 
 #metodo detallar un profesor

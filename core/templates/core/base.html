@@ -58,14 +58,33 @@
                           <ul class="dropdown-menu">
                               <li><a href="{% url "servicios-lista"%}">Lista Servicios</a></li>
                               <li><a href="{% url "servicio-nuevo"%}">Nuevo Servicio</a></li>
-                              <li><a href="{% url "tipoactividades-lista"%}">Lista Tipo Actividad</a></li>
+                              <li><a href="{% url "tipoactividades-lista"%}">Lista Tipo Actividades</a></li>
                               <li><a href="{% url "tipoactividades-nuevo"%}">Nuevo Tipo Actividad</a></li>
-                              <li><a href="{% url "actividades-lista"%}">Lista Actividad</a></li>
+                              <li><a href="{% url "actividades-lista"%}">Lista Actividades</a></li>
                               <li><a href="{% url "actividades-nueva"%}">Nueva Actividad</a></li>
                           </ul>
                       </li>
-                        <li><a href="{% url "Lista-profesor"%}">Profesores</a></li>
-                        <li><a href="services.html">Programacion</a></li>
+                      <li class="dropdown">
+                          <a href="{% url "Lista-profesor"%}" class="dropdown-toggle" data-toggle="dropdown">Profesores<i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="{% url "agregar-profesor"%}">Nuevo Profesor</a></li>
+                              <li><a href="{% url "Lista-profesor"%}">Lista Profesores</a></li>
+
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="{% url "programacion-lista"%}" class="dropdown-toggle" data-toggle="dropdown">Programacion<i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="{% url "horario-lista"%}">Lista Horarios</a></li>
+                              <li><a href="#">Nuevo Horario</a></li>
+                              <li><a href="{% url "dias-lista"%}">Lista Dias</a></li>
+                              <li><a href="{% url "dia-nuevo"%}">Nuevo Dia</a></li>
+                              <li><a href="{% url "lugar-lista"%}">Lista Lugares</a></li>
+                              <li><a href="{% url "lugar-nuevo"%}">Nuevo Lugar</a></li>
+                              <li><a href="{% url "programacion-lista"%}">Lista Programacion</a></li>
+                              <li><a href="{% url "programacion-nueva"%}">Nueva Programacion</a></li>
+                          </ul>
+                      </li>
                         <li><a href="{% url "lista-estudiantes"%}">Inscripcion</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>

@@ -37,8 +37,22 @@
       {% endfor%}
     </tbody>
   </table>
-    </form>
+  <div class="pagination">
+    <span class="step-links">
+        {% if a.has_previous %}
+            <a href="?page={{ a.previous_page_number }}">Anterior</a>
+        {% endif %}
+        <span class="current">
+            Pagina {{ a.number }} de {{ a.paginator.num_pages }}.
+        </span>
+        {% if a.has_next %}
+            <a href="?page={{ a.next_page_number }}">Siguiente</a>
+        {% endif %}
+    </span>
+</div>
   </div>
 </section>
+
+
 
 {% endblock %}

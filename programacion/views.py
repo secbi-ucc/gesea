@@ -6,14 +6,23 @@ from .forms import LugarForm
 from .forms import DiaForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 
 #metodo para listar horarios
 @login_required ( login_url = '/login/' )
 def horario_lista(request):
+    horarios = Horario.objects.all()
+    paginator = Paginator(horarios, 25)
+    page = request.GET.get('page')
+    try:
+        a = paginator.page(page)
+    except PageNotAnInteger:
+        a = paginator.page(1)
+    except EmptyPage:
+        a = paginator.page(paginator.num_pages)
 
-        a = Horario.objects.all()
-
-        return render(request, 'programacion/lista_horarios.html', {'a':a})
+    return render(request, 'programacion/lista_horarios.html', {'a':a})
 
 #metodo para eliminar un horario
 @user_passes_test(lambda u: u.is_superuser, login_url='/no-permitido/')
@@ -40,8 +49,15 @@ def horario_detalle(request, id_horario):
 #metodo para listar dias y su horario
 @login_required ( login_url = '/login/' )
 def dias_lista(request):
-
-    a = DiaActividad.objects.all()
+    dias = DiaActividad.objects.all()
+    paginator = Paginator(dias, 25)
+    page = request.GET.get('page')
+    try:
+        a = paginator.page(page)
+    except PageNotAnInteger:
+        a = paginator.page(1)
+    except EmptyPage:
+        a = paginator.page(paginator.num_pages)
 
     return render(request, 'programacion/lista_dias.html', {'a':a})
 
@@ -97,8 +113,15 @@ def dia_eliminar(request, id_dia):
 #metodo para listar lugares
 @login_required ( login_url = '/login/' )
 def lugares_lista(request):
-
-    a = Lugar.objects.all()
+    lugares = Lugar.objects.all()
+    paginator = Paginator(lugares, 25)
+    page = request.GET.get('page')
+    try:
+        a = paginator.page(page)
+    except PageNotAnInteger:
+        a = paginator.page(1)
+    except EmptyPage:
+        a = paginator.page(paginator.num_pages)
 
     return render(request, 'programacion/lista_lugar.html', {'a':a})
 
