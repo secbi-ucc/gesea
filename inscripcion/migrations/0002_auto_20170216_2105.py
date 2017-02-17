@@ -7,13 +7,13 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('inscripcion', '0002_auto_20161113_1442'),
+        ('inscripcion', '0001_initial'),
     ]
 
     operations = [
-        migrations.AlterField(
+        migrations.RenameField(
             model_name='estudiantes',
-            name='inscripcion',
-            field=models.ManyToManyField(to=b'inscripcion.Inscripcion', null=True, blank=True),
+            old_name='sexo',
+            new_name='genero',
         ),
     ]

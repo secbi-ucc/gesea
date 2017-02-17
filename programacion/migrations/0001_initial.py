@@ -7,8 +7,8 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('actividades', '__first__'),
-        ('profesor', '__first__'),
+        ('actividades', '0001_initial'),
+        ('profesor', '0001_initial'),
     ]
 
     operations = [

@@ -28,26 +28,28 @@ class Estudiantes(models.Model):
         ('10', '10'),
     )
     GENERO_ESTUDIANTE = (
-        ('FEMENINO', 'Femenino'),
-        ('MASCULINO', 'Masculino'),
+        ('F', 'Femenino'),
+        ('M', 'Masculino'),
     )
-    FACULTAD_ESTUDIANTE = (
-        ('CONTADURIA PUBLICA', 'Contaduria publica'),
-        ('DERECHO', 'Derecho'),
-        ('INGENIERIA DE SISTEMAS', 'Ingenieria de sistemas'),
-        ('PSICOLOGIA', 'Psicologia'),
+    TIPO_NID = (
+        ('TI', 'TI'),
+        ('CC', 'CC'),
     )
+
     Codigo_estudiante = models.CharField(max_length=10, primary_key=True)
     nombre = models.CharField(max_length=30)
     apellidos = models.CharField(max_length=30)
-    semestre = models.CharField(max_length=30 , choices=SEMESTRE_ESTUDIANTE)
-    sexo = models.CharField(max_length=30, choices=GENERO_ESTUDIANTE)
-    facultad = models.CharField(max_length=30, choices=FACULTAD_ESTUDIANTE)
-    correo = models.CharField(max_length=30, unique=True)
+    nid = models.CharField(max_length=30)
+    tipo_nid=models.CharField(max_length=30, choices=TIPO_NID)
+    semestre = models.CharField(max_length=30 , choices=SEMESTRE_ESTUDIANTE, blank=True)
+    genero = models.CharField(max_length=30, choices=GENERO_ESTUDIANTE)
+    programa_academico = models.CharField(max_length=30)
+    correo = models.EmailField(max_length=30, unique=True)
     telefono = models.CharField(max_length=30)
     Horas_estudiante = models.IntegerField()
     inscripcion = models.ManyToManyField(Inscripcion, null=True, blank=True)
     Estado = models.CharField(max_length=20, choices=ESTADOS_ESTUDIANTE, default='ACTIVO')
+    ciclo_lectivo = models.CharField(max_length=30)
 
     def __unicode__(self):
         return unicode(self.nombre)
