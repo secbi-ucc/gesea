@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31e2bb83-ac4d-4b65-af5a-3758088f4a9d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/control_bienestar/settings.py" afterPath="$PROJECT_DIR$/control_bienestar/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscripcion/admin.py" afterPath="$PROJECT_DIR$/inscripcion/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscripcion/forms.py" afterPath="$PROJECT_DIR$/inscripcion/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscripcion/models.py" afterPath="$PROJECT_DIR$/inscripcion/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requierements.txt" afterPath="$PROJECT_DIR$/requierements.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inscripcion/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
@@ -41,6 +37,16 @@
               <folding>
                 <element signature="e#46#78#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requierements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requierements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,6 +99,7 @@
         <option value="$PROJECT_DIR$/inscripcion/forms.py" />
         <option value="$PROJECT_DIR$/inscripcion/models.py" />
         <option value="$PROJECT_DIR$/inscripcion/admin.py" />
+        <option value="$PROJECT_DIR$/requierements.txt" />
       </list>
     </option>
   </component>
@@ -496,14 +503,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requierements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MODELOS DE BASE DE DATOS.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -564,6 +563,14 @@
           <folding>
             <element signature="e#46#78#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requierements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

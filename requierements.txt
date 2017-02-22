@@ -1,3 +1,8 @@
+diff-match-patch==20121119
 Django==1.7
-wheel==0.24.0
+django-import-export==0.5.1
 django-suit==0.2.24
+docutils==0.13.1
+suit==2.0.2
+tablib==0.11.4
+wheel==0.24.0
