@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -44,6 +45,7 @@ INSTALLED_APPS = (
     'programacion',
     'core',
     'inscripcion',
+    'import_export',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,9 +57,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
-
-from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
-
 
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',

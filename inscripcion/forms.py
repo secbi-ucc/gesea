@@ -5,4 +5,4 @@ class EstudiantesForm(forms.ModelForm):
 
     class Meta:
         model = Estudiantes
-        fields = ['Codigo_estudiante','Horas_estudiante','nombre','apellidos','nid','tipo_nid','programa_academico','genero','semestre','correo','Estado','telefono','ciclo_lectivo']
+        fields = ['Codigo_estudiante','nombre_1','apellido_1','nid','tipo_nid','programa_academico','genero','semestre','correo','Estado','telefono','ciclo_lectivo']
