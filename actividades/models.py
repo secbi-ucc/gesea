@@ -34,8 +34,11 @@ class TipoActividad(models.Model):
         ('TORNEO INTERNO MICRO', 'Torneo Interno Micro'),
         ('VOLEIBOL', 'Voleibol Masc Y Fem'),
     )
+
     Codigo_tipoActividad = models.CharField(max_length=10,unique=True)
     nombre = models.CharField(max_length=50, choices=TIPOS_ACTIVIDADES)
+    class Meta:
+        verbose_name_plural = "Tipo Actividad"
 
     def __unicode__(self):
         return unicode(self.nombre)
@@ -51,6 +54,7 @@ class Actividad(models.Model):
     tipo_actividad = models.ForeignKey(TipoActividad)
     Estado_actividad =  models.CharField(max_length=30, choices=ESTADOS_ACTIVIDAD, default='ABIERTA')
     Cupo_Actividad = models.IntegerField(max_length = 5)
-
+    class Meta:
+        verbose_name_plural = "Actividad"
     def __unicode__(self):
         return unicode(self.tipo_actividad)

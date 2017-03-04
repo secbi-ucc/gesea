@@ -13,7 +13,8 @@ class Horario(models.Model):
 
 class Lugar(models.Model):
     NombreLugar = models.CharField(max_length=30)
-
+    class Meta:
+        verbose_name_plural = "Lugar"
     def __unicode__(self):
         return unicode(self.NombreLugar)
 
@@ -30,6 +31,8 @@ class DiaActividad(models.Model):
 
     Dia_Actividad = models.CharField(max_length=10,choices=Diaactidad)
     Horario =  models.ForeignKey(Horario)
+    class Meta:
+        verbose_name_plural = "Dia Actividad"
 
     def __unicode__(self):
         return unicode(self.Dia_Actividad)
@@ -51,6 +54,7 @@ class Programacion(models.Model):
     Dia_semana =  models.ManyToManyField(DiaActividad)
     Fecha_Inicio = models.DateTimeField(null=True)
     Fecha_Final = models.DateTimeField(null=True)
-
+    class Meta:
+        verbose_name_plural = "Programacion"
     def __unicode__(self):
         return unicode(self.actividad)

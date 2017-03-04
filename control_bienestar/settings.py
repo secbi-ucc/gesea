@@ -63,9 +63,16 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
 )
 
 SUIT_CONFIG  =  {
-
+    'ADMIN_NAME': 'CONTROL BIENESTAR',
     'SEARCH_URL' :  '',
-    'LIST_PER_PAGE' :  20 ,
+    'LIST_PER_PAGE' :  50 ,
+    'MENU_ICONS': {
+        'actividades': ' icon-folder-open',
+        'auth': 'icon-lock',
+        'inscripcion':' icon-list-alt',
+        'profesor':' icon-user',
+        'programacion':'icon-calendar',
+    }
 
 
 }

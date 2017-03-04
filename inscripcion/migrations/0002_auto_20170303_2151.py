@@ -11,9 +11,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RenameField(
+        migrations.AlterField(
             model_name='estudiantes',
-            old_name='sexo',
-            new_name='genero',
+            name='Programa_Academico',
+            field=models.ForeignKey(to='inscripcion.Programa', null=True),
         ),
     ]

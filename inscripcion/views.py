@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from .models import Estudiantes, Inscripcion
 from django.shortcuts import get_object_or_404
-from .forms import EstudiantesForm
+
+
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import user_passes_test
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -41,18 +42,6 @@ def detalle_estudiante(request, id_estudiante):
 
     return render(request, 'inscripcion/detalle_estudiante.html', {'b':b})
 
-@user_passes_test(lambda u: u.is_superuser, login_url='/no-permitido/')
-def agregar_estudiante(request):
-
-    form_estudiante = EstudiantesForm()
-    if request.method == "POST":
-        form_estudiante = EstudiantesForm(request.POST)
-        if form_estudiante.is_valid():
-            form_estudiante.save()
-            a = Estudiantes.objects.all()
-            return render(request, "inscripcion/lista_estudiantes.html",{'a':a})
-
-    return render(request,"inscripcion/agregar_estudiante_form.html", {"form_estudiante":form_estudiante})
 
 @user_passes_test(lambda u: u.is_superuser, login_url='/no-permitido/')
 def editar_estudiante(request, id_estudiante):
