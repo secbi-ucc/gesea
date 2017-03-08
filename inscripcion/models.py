@@ -5,14 +5,6 @@ from actividades.models import Actividad
 
 
 # Create your models here.
-class Inscripcion(models.Model):
-    actividad = models.ForeignKey(Programacion)
-
-    class Meta:
-        verbose_name_plural = "Inscripcion"
-    def __unicode__(self):
-        return unicode(self.actividad)
-
 
 class Programa(models.Model):
     cod = models.CharField(max_length=60)
@@ -49,10 +41,19 @@ class Estudiantes(models.Model):
     Programa_Academico = models.ForeignKey(Programa, null=True)
     Correo_Institucional = models.EmailField(max_length=50, unique=True)
     Nro_Telefonico = models.CharField(max_length=30, null=True)
-    inscripcion = models.ManyToManyField(Inscripcion, null=True, blank=True)
     Ciclo_Lectivo = models.CharField(max_length=30, null=True)
     Descripcion = models.CharField(max_length=30, null=True)
 
 
     def __unicode__(self):
         return unicode(self.ID_Estudiante)
+
+class Inscripcion(models.Model):
+
+    actividad = models.ForeignKey(Programacion)
+    estudiante = models.ForeignKey(Estudiantes, null=True)
+
+    class Meta:
+        verbose_name_plural = "Inscripcion"
+    def __unicode__(self):
+        return unicode(self.actividad)

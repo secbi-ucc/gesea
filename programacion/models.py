@@ -8,7 +8,7 @@ class Horario(models.Model):
     Hora_Final = models.TimeField(null=True)
 
     def __unicode__(self):
-        return unicode(self.Hora_Inicio)
+        return unicode(str(self.Hora_Inicio) + " - " + str(self.Hora_Final))
 
 
 class Lugar(models.Model):
@@ -35,7 +35,7 @@ class DiaActividad(models.Model):
         verbose_name_plural = "Dia Actividad"
 
     def __unicode__(self):
-        return unicode(self.Dia_Actividad)
+        return unicode(self.Dia_Actividad + "-" +  str(self.Horario))
 
 
 class Programacion(models.Model):
