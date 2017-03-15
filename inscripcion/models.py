@@ -50,10 +50,11 @@ class Estudiantes(models.Model):
 
 class Inscripcion(models.Model):
 
-    actividad = models.ForeignKey(Programacion)
+    programacion = models.ForeignKey(Programacion)
     estudiante = models.ForeignKey(Estudiantes, null=True)
+    fecha_inscripcion = models.DateField(null=True)
 
     class Meta:
         verbose_name_plural = "Inscripcion"
     def __unicode__(self):
-        return unicode(self.actividad)
+        return unicode(self.programacion)

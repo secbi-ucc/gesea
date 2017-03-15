@@ -39,6 +39,7 @@ class DiaActividad(models.Model):
 
 
 class Programacion(models.Model):
+    actividad = models.ForeignKey(Actividad)
     Tipo_participacion = (
         ('CURSO', 'Curso'),
         ('GRUPO DE REPRESENTACION', 'Grupo de representacion'),
@@ -49,11 +50,13 @@ class Programacion(models.Model):
     TipodeParticipacion = models.CharField(max_length=30, choices=Tipo_participacion)
     profesor = models.ForeignKey(Profesor, null=True, blank=True)
     lugarActividad = models.ForeignKey(Lugar)
-    Servicio = models.ForeignKey(Servicio)
-    actividad = models.ForeignKey(Actividad)
     Dia_semana =  models.ManyToManyField(DiaActividad)
     Fecha_Inicio = models.DateTimeField(null=True)
     Fecha_Final = models.DateTimeField(null=True)
+
+    def horario(self):
+        return ",".join([str(p) for p in self.Dia_semana.all()])
+
     class Meta:
         verbose_name_plural = "Programacion"
     def __unicode__(self):

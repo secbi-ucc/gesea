@@ -32,7 +32,9 @@ class EstudianteAdmin(ImportExportModelAdmin):
 
 class Inscripciones (admin.ModelAdmin):
 
-	list_display = ['id','actividad']
+	list_filter = ('programacion__id',)
+
+	list_display = ['fecha_inscripcion','programacion', 'estudiante']
 	class Meta:
 		model = Inscripcion
 
