@@ -95,13 +95,16 @@ WSGI_APPLICATION = 'control_bienestar.wsgi.application'
 urlparse.uses_netloc.append("postgres")
 url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
-conn = psycopg2.connect(
-    database=url.path[1:],
-    user=url.username,
-    password=url.password,
-    host=url.hostname,
-    port=url.port
-)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mibasededatos',
+        'USER': 'admin',
+        'PASSWORD': '12345',
+        'HOST': '',
+        'PORT': '',
+    },
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
