@@ -15,6 +15,7 @@ import psycopg2
 import urlparse
 import dj_database_url
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -132,8 +133,10 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = 'core/static/'
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 
 MEDIA_URL = '/media/'
+
+TATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
