@@ -94,16 +94,15 @@ WSGI_APPLICATION = 'control_bienestar.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 urlparse.uses_netloc.append("postgres")
-url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dcfhtua0309odc',
-        'USER': 'zpjhsyiinqbepw',
-        'PASSWORD': 'zpjhsyiinqbepw',
+        'NAME': 'postgres',
         'HOST': '',
         'PORT': '5432',
+        'USER': 'postgres',
+        'PASSWORD': '12345'
     },
 }
 
@@ -121,18 +120,19 @@ USE_L10N = True
 USE_TZ = True
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_DIR, "core/templates"),
+    os.path.join("core/templates"),
     # here you can add another templates directory if you wish.
 )
 
 # Static files (CSS, JavaScript, Images)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 STATICFILES_DIRS = (
     os.path.join('core/static'),
 )
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = 'core/static/'
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 
