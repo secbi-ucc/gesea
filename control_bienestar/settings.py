@@ -16,6 +16,7 @@ import urlparse
 import dj_database_url
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 
@@ -126,9 +127,9 @@ TEMPLATE_DIRS = (
 )
 
 # Static files (CSS, JavaScript, Images)
-STATICFILES_DIRS = [
+STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'core/static'),
-]
+)
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
