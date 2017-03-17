@@ -10,13 +10,11 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import os.path
 import psycopg2
 import urlparse
 import dj_database_url
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -128,8 +126,9 @@ TEMPLATE_DIRS = (
 )
 
 # Static files (CSS, JavaScript, Images)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'core/static'),
+    os.path.join('core/static'),
 )
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
@@ -139,4 +138,4 @@ STATIC_URL = 'core/static/'
 
 MEDIA_URL = '/media/'
 
-TATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
