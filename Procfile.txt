@@ -1,0 +1,1 @@
+web: gunicorn control_bienestar.wsgi --log-file -
