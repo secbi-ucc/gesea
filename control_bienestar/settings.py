@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import os.path
 import psycopg2
 import urlparse
 import dj_database_url
@@ -98,10 +99,10 @@ url = urlparse.urlparse(os.environ["DATABASE_URL"])
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mibasededatos',
+        'NAME': 'dcfhtua0309odc',
         'USER': 'zpjhsyiinqbepw',
         'PASSWORD': 'zpjhsyiinqbepw',
-        'HOST': '',
+        'HOST': 'ec2-23-21-227-73.compute-1.amazonaws.com',
         'PORT': '5432',
     },
 }
@@ -119,14 +120,19 @@ USE_L10N = True
 
 USE_TZ = True
 
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_DIR, "core/templates"),
+    # here you can add another templates directory if you wish.
+)
 
 # Static files (CSS, JavaScript, Images)
-STATICFILES_DIRS = (
-    os.path.join('core/static'),
-)
-STATIC_ROOT = 'staticfiles'
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, 'core/static'),
+]
 
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
+
 MEDIA_URL = '/media/'
