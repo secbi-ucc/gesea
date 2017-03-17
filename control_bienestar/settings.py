@@ -102,7 +102,7 @@ DATABASES = {
         'NAME': 'dcfhtua0309odc',
         'USER': 'zpjhsyiinqbepw',
         'PASSWORD': 'zpjhsyiinqbepw',
-        'HOST': 'ec2-23-21-227-73.compute-1.amazonaws.com',
+        'HOST': '',
         'PORT': '5432',
     },
 }
