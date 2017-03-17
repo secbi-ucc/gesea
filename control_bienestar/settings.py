@@ -27,7 +27,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,7 +81,7 @@ SUIT_CONFIG  =  {
 
 ROOT_URLCONF = 'control_bienestar.urls'
 
-LOGIN_REDIRECT_URL = 'inicio'
+LOGIN_REDIRECT_URL = '/admin'
 
 WSGI_APPLICATION = 'control_bienestar.wsgi.application'
 
@@ -89,15 +89,8 @@ WSGI_APPLICATION = 'control_bienestar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {
-    'default': { 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-      'NAME': 'postgres',
-      'HOST': 'localhost',
-      'PORT': '5432',
-      'USER': 'postgres',
-      'PASSWORD': '12345'
-  }
-}
+DATABASES['default'] =  dj_database_url.config()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -114,6 +107,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATICFILES_DIRS = (
     os.path.join('core/static'),
 )
