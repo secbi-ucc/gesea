@@ -10,6 +10,9 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import psycopg2
+import urlparse
+import dj_database_url
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -89,8 +92,16 @@ WSGI_APPLICATION = 'control_bienestar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES['default'] =  dj_database_url.config()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+urlparse.uses_netloc.append("postgres")
+url = urlparse.urlparse(os.environ["DATABASE_URL"])
+
+conn = psycopg2.connect(
+    database=url.path[1:],
+    user=url.username,
+    password=url.password,
+    host=url.hostname,
+    port=url.port
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -107,7 +118,6 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATICFILES_DIRS = (
     os.path.join('core/static'),
 )
