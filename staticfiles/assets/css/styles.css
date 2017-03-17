@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+}
+body {
+	background: url(../images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.login-form {
+    font: 16px/2em Lato, serif;
+	margin: 100px auto;
+	max-width: 400px;
+}
+
+form[role=login] {
+	color: #5d5d5d;
+	background:rgba(255, 255, 255, 0.19);
+	padding: 26px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+	form[role=login] img {
+		display: block;
+		margin: 0 auto;
+
+	}
+	form[role=login] input,
+	form[role=login] button {
+		font-size: 18px;
+		margin: 0px 0;
+		border-radius: 4px;
+		border-left-width: 0px;
+		border-right-width: 0px;
+		border-top-width: 0px;
+		border-bottom-width: 0px;
+		width: 345px;
+		height: 45px;
+		padding: 10px
+	}
+
+
+	form[role=login] > div {
+		text-align: center;
+	}
+
+.form-links {
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 50px;
+}
+	.form-links a {
+		color: #ffffff;
+	}
+
+img.logo-menu{
+	width: 77px;
+	height: 73px;
+
+}
