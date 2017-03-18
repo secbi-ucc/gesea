@@ -10,8 +10,12 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import psycopg2
+import urlparse
+import dj_database_url
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 
@@ -27,7 +31,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -63,9 +67,16 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
 )
 
 SUIT_CONFIG  =  {
-
+    'ADMIN_NAME': 'CONTROL BIENESTAR',
     'SEARCH_URL' :  '',
-    'LIST_PER_PAGE' :  20 ,
+    'LIST_PER_PAGE' :  50 ,
+    'MENU_ICONS': {
+        'actividades': ' icon-folder-open',
+        'auth': 'icon-lock',
+        'inscripcion':' icon-list-alt',
+        'profesor':' icon-user',
+        'programacion':'icon-calendar',
+    }
 
 
 }
@@ -74,7 +85,7 @@ SUIT_CONFIG  =  {
 
 ROOT_URLCONF = 'control_bienestar.urls'
 
-LOGIN_REDIRECT_URL = 'inicio'
+LOGIN_REDIRECT_URL = '/admin'
 
 WSGI_APPLICATION = 'control_bienestar.wsgi.application'
 
@@ -82,11 +93,17 @@ WSGI_APPLICATION = 'control_bienestar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
+urlparse.uses_netloc.append("postgres")
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'HOST': '',
+        'PORT': '5432',
+        'USER': 'postgres',
+        'PASSWORD': '12345'
+    },
 }
 
 # Internationalization
@@ -102,13 +119,23 @@ USE_L10N = True
 
 USE_TZ = True
 
+TEMPLATE_DIRS = (
+    os.path.join("core/templates"),
+    # here you can add another templates directory if you wish.
+)
 
 # Static files (CSS, JavaScript, Images)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 STATICFILES_DIRS = (
     os.path.join('core/static'),
 )
 
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
+
 MEDIA_URL = '/media/'
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

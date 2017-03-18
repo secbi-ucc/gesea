@@ -8,7 +8,7 @@ class ProgramacionForm(forms.ModelForm):
 
     class Meta:
         model = Programacion
-        fields = ['Servicio','actividad', 'TipodeParticipacion', 'lugarActividad','Dia_semana','profesor', 'Fecha_Inicio','Fecha_Final']
+        fields = ['actividad', 'TipodeParticipacion', 'lugarActividad','Dia_semana','profesor', 'Fecha_Inicio','Fecha_Final']
 
 class LugarForm(forms.ModelForm):
 

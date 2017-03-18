@@ -13,26 +13,28 @@ from import_export.admin import ImportExportModelAdmin
 
 class EstudianteResource(resources.ModelResource):
 
-	programa_academico = fields.Field(attribute='programa_academico',
+	Programa_Academico = fields.Field(attribute='Programa_Academico',
 								   widget=ForeignKeyWidget(Programa, 'nombre'))
 
 	class Meta:
-		import_id_fields = ('Codigo_estudiante',)
+		import_id_fields = ('ID_Estudiante',)
 		model = Estudiantes
-		export_order = ('Codigo_estudiante', 'programa_academico', 'apellido_1', 'apellido_2', 'nombre_1', 'nombre_2', 'telefono', 'correo')
-		fields = ('Codigo_estudiante', 'programa_academico', 'apellido_1', 'apellido_2', 'nombre_1', 'nombre_2', 'telefono', 'correo')
+		export_order = ('Ciclo_Lectivo', 'Programa_Academico','ID_Estudiante','Tipo_Documento','Nro_Documento', 'Primer_Apellido', 'Segundo_Apellido', 'Primer_Nombre', 'Segundo_Nombre', 'Nro_Telefonico', 'Correo_Institucional','Descripcion')
+		fields = ('Ciclo_Lectivo', 'Programa_Academico','ID_Estudiante','Tipo_Documento','Nro_Documento', 'Primer_Apellido', 'Segundo_Apellido', 'Primer_Nombre', 'Segundo_Nombre', 'Nro_Telefonico', 'Correo_Institucional','Descripcion')
 
 class EstudianteAdmin(ImportExportModelAdmin):
-    search_fields = ('apellido_1',)
-    list_filter = ('programa_academico',)
-    list_display = ['Codigo_estudiante', 'nombre_1', 'apellido_1', 'programa_academico', 'genero', 'correo', 'telefono']
+    search_fields = ('Primer_Apellido', 'Segundo_Apellido',"Nro_Documento","Primer_Nombre")
+    list_filter = ('Ciclo_Lectivo','Programa_Academico')
+    list_display = ['Ciclo_Lectivo', 'Programa_Academico','ID_Estudiante','Tipo_Documento','Nro_Documento', 'Primer_Apellido', 'Segundo_Apellido', 'Primer_Nombre', 'Segundo_Nombre', 'Nro_Telefonico', 'Correo_Institucional','Descripcion']
     resource_class = EstudianteResource
 
 
 
 class Inscripciones (admin.ModelAdmin):
 
-	list_display = ['id','actividad']
+	list_filter = ('programacion__id',)
+
+	list_display = ['fecha_inscripcion','programacion', 'estudiante']
 	class Meta:
 		model = Inscripcion
 
