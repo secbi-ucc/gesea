@@ -10,13 +10,9 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import psycopg2
-import urlparse
-import dj_database_url
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
 
 
 
@@ -93,17 +89,11 @@ WSGI_APPLICATION = 'control_bienestar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-urlparse.uses_netloc.append("postgres")
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'HOST': '',
-        'PORT': '5432',
-        'USER': 'postgres',
-        'PASSWORD': '12345'
-    },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_ROOT, 'db.sqlite3'),
+    }
 }
 
 # Internationalization
@@ -138,4 +128,4 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

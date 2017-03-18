@@ -48,26 +48,12 @@ class Estudiantes(models.Model):
     def __unicode__(self):
         return unicode(self.ID_Estudiante)
 
+
+
 class Inscripcion(models.Model):
-
-    programacion = models.ForeignKey(Programacion)
+    programacion = models.ForeignKey(Programacion, null=True)
     estudiante = models.ForeignKey(Estudiantes, null=True)
-    fecha_inscripcion = models.DateField(null=True)
-
-    class Meta:
-        verbose_name_plural = "Inscripcion"
-    def __unicode__(self):
-<<<<<<< HEAD
-        return unicode(self.Codigo_estudiante)
-
-
-class InscripcionEstudiante(models.Model):
-    actividad = models.ForeignKey(Programacion, null=True)
-    estudiante = models.ForeignKey(Estudiantes)
-    fecha_inscripcion = models.DateField(auto_now=True)
+    fecha_inscripcion = models.DateField(auto_now=True, null=True)
 
     def __unicode__(self):
-        return unicode(self.actividad)
-=======
         return unicode(self.programacion)
->>>>>>> 2469ef0979f0c7f67a3e02264d474c24f5db702d
