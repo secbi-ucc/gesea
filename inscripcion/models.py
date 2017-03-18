@@ -63,3 +63,12 @@ class Estudiantes(models.Model):
 
     def __unicode__(self):
         return unicode(self.Codigo_estudiante)
+
+
+class InscripcionEstudiante(models.Model):
+    actividad = models.ForeignKey(Programacion, null=True)
+    estudiante = models.ForeignKey(Estudiantes)
+    fecha_inscripcion = models.DateField(auto_now=True)
+
+    def __unicode__(self):
+        return unicode(self.actividad)
