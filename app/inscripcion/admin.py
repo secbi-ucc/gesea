@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from .models import Estudiantes, Inscripcion, Programa
+from .models import Estudiantes, Programa, Inscripcion
 from import_export import resources
 #
 from import_export.widgets import ForeignKeyWidget
@@ -42,6 +42,8 @@ class Estudiante (admin.ModelAdmin):
 
 	class Meta:
 		model = Estudiantes
+
+
 
 
 admin.site.register(Inscripcion, Inscripciones)
