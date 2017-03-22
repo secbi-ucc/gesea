@@ -2,12 +2,408 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31e2bb83-ac4d-4b65-af5a-3758088f4a9d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscripcion/admin.py" afterPath="$PROJECT_DIR$/inscripcion/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscripcion/models.py" afterPath="$PROJECT_DIR$/inscripcion/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/programacion/admin.py" afterPath="$PROJECT_DIR$/programacion/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/programacion/forms.py" afterPath="$PROJECT_DIR$/programacion/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/programacion/models.py" afterPath="$PROJECT_DIR$/programacion/models.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MODELOS DE BASE DE DATOS.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Procfile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/forms.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/migrations/0002_auto_20170307_2034.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/detalle_actividad.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/detalle_servicio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/detalle_tipoActividad.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/editar_actividad.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/editar_actividades.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/editar_servicio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/editar_tipoactividad.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/eliminar_actividad.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/eliminar_servicio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/eliminar_tipoActividad.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/lista_actividades.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/lista_servicios.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/lista_tipoActividad.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/nueva_actividad_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/nueva_actividad_mesaje.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/nuevo_servicio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/templates/actividades/nuevo_tipoActividad.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/actividades/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/control_bienestar/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/control_bienestar/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/control_bienestar/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/control_bienestar/wsgi.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/css/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/css/changelists.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/css/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/css/forms.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/css/ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/css/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/css/rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/css/widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/changelist-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/changelist-bg_rtl.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/default-bg-reverse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/default-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/deleted-overlay.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/gis/move_vertex_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/gis/move_vertex_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon-no.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon-unknown.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon-yes.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon_addlink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon_alert.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon_calendar.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon_changelink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon_clock.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon_deletelink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon_error.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon_searchbox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/icon_success.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/inline-delete-8bit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/inline-delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/inline-restore-8bit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/inline-restore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/inline-splitter-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/nav-bg-grabber.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/nav-bg-reverse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/nav-bg-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/nav-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/selector-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/selector-search.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/sorting-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/tooltag-add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/img/tooltag-arrowright.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/LICENSE-JQUERY.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/SelectBox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/SelectFilter2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/actions.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/admin/DateTimeShortcuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/admin/RelatedObjectLookups.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/collapse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/inlines.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/inlines.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/jquery.init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/prepopulate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/prepopulate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/timeparse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/admin/js/urlify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/bootstrap/js/npm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/css/animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/css/prettyPhoto.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/css/responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/css/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/bg1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/img1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/kick_the_ball-wallpaper-1366x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/logo_login.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/assets/images/logo_menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/cms/css/pages.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/import_export/action_formats.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/bootstrap/img/glyphicons-halflings-white-shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/bootstrap/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/bootstrap/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/css/djangocms.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/css/filer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/css/suit.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/img/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/img/bg_left_white.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/img/bg_pattern.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/img/cc_active_nav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/img/drag-handle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/img/glyphicons-halflings-white-nav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/img/glyphicons-halflings-white-shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/js/djangocms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/js/jquery-1.8.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/js/jquery-2.2.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/js/jquery.autosize-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/js/sortables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/js/suit-form-confirm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/js/suit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/djangocms.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/djangocms/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/filer.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/footer.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/header.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/left-column.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/print.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/sticky-footer.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/suit.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/actionlist.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/box.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/breadcrumb.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/calendar.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/datepicker.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/form.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/left-nav.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/login.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/pagination.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/table.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/ui/tabs.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/static/suit/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/templates/core/Login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/templates/core/base.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/templates/core/base_admin.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/templates/core/inicio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/templates/core/logout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/templates/core/no_permitido.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/core/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/apps.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/forms.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/migrations/0002_auto_20170303_2151.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/migrations/0003_auto_20170303_2223.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/migrations/0004_auto_20170307_2034.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/migrations/0005_auto_20170307_2059.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/migrations/0006_inscripcion_fecha_inscripcion.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/migrations/0007_auto_20170314_1605.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/templates/inscripcion/agregar_estudiante_form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/templates/inscripcion/agregar_estudiante_mensaje.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/templates/inscripcion/detalle_estudiante.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/templates/inscripcion/editar_estudiante.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/templates/inscripcion/forms/agregar_usuario.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/templates/inscripcion/forms/inscripcionesf.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/templates/inscripcion/lista_estudiantes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/inscripcion/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/manage.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/forms.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/migrations/0002_auto_20170307_2034.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/templates/profesor/Lista_profesores.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/templates/profesor/agregar_profesor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/templates/profesor/detalle_profesor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/templates/profesor/editar_profesor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profesor/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/admin.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/forms.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/migrations/0002_auto_20170307_2034.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/migrations/0003_remove_programacion_servicio.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/detalle_dia.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/detalle_horario.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/detalle_lugar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/detalle_programacion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/editar_dia.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/editar_lugar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/eliminar_dia.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/eliminar_horario.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/eliminar_lugar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/eliminar_programacion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/lista_dias.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/lista_horarios.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/lista_lugar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/lista_programacion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/nueva_programacion.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/nuevo_dia.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/templates/programacion/nuevo_lugar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/programacion/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/changelists.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/forms.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/rtl.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/css/widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/changelist-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/changelist-bg_rtl.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/default-bg-reverse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/default-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/deleted-overlay.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_off.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_on.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-no.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-unknown.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon-yes.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_addlink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_alert.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_calendar.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_changelink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_clock.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_deletelink.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_error.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_searchbox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/icon_success.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-delete-8bit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-restore-8bit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-restore.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/inline-splitter-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg-grabber.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg-reverse.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg-selected.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/nav-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/selector-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/selector-search.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/sorting-icons.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-arrowright.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/LICENSE-JQUERY.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectBox.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/SelectFilter2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/DateTimeShortcuts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/admin/RelatedObjectLookups.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/calendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/collapse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/inlines.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/timeparse.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/admin/js/urlify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/css/bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/css/bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/css/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/bootstrap/js/npm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/css/animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/css/prettyPhoto.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/css/responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/css/styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/images/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/images/bg1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/images/img1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/images/kick_the_ball-wallpaper-1366x768.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/images/logo_login.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/assets/images/logo_menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/cms/css/pages.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/import_export/action_formats.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/bootstrap/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/bootstrap/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/bootstrap/img/glyphicons-halflings-white-shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/bootstrap/img/glyphicons-halflings-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/bootstrap/img/glyphicons-halflings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/css/djangocms.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/css/filer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/css/suit.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/img/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/img/bg_left_white.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/img/bg_pattern.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/img/cc_active_nav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/img/drag-handle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/img/glyphicons-halflings-white-nav.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/img/glyphicons-halflings-white-shadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/js/djangocms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/js/jquery-1.8.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/js/jquery-2.2.4.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/js/jquery.autosize-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/js/sortables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/js/suit-form-confirm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/js/suit.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/djangocms.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/djangocms/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/filer.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/footer.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/header.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/left-column.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/print.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/sticky-footer.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/suit.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/actionlist.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/box.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/breadcrumb.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/calendar.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/datepicker.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/form.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/left-nav.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/login.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/pagination.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/table.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/ui/tabs.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/staticfiles/suit/less/variables.less" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,65 +418,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="requierements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requierements.txt">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/control_bienestar/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/programacion/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="30" column="77" lean-forward="false" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/actividades/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-573">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inscripcion/admin.py">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="36" column="68" lean-forward="false" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
+            <state relative-caret-position="15">
+              <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/programacion/models.py">
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="56" column="15" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inscripcion/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="16" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,7 +456,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/control_bienestar/settings.py" />
         <option value="$PROJECT_DIR$/inscripcion/forms.py" />
         <option value="$PROJECT_DIR$/requierements.txt" />
         <option value="$PROJECT_DIR$/inscripcion/models.py" />
@@ -102,6 +463,9 @@
         <option value="$PROJECT_DIR$/inscripcion/admin.py" />
         <option value="$PROJECT_DIR$/programacion/models.py" />
         <option value="$PROJECT_DIR$/programacion/admin.py" />
+        <option value="$PROJECT_DIR$/control_bienestar/wsgi.py" />
+        <option value="$PROJECT_DIR$/control_bienestar/settings.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -132,6 +496,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -154,7 +519,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="programacion" />
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -168,7 +533,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="profesor" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -182,17 +547,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="inscripcion" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="control-bienestar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="control-bienestar" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -200,23 +555,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="control-bienestar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="control-bienestar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actividades" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -511,26 +851,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="708" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26898223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2775974" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2775974" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,35 +884,15 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/requierements.txt">
+    <entry file="file://$PROJECT_DIR$/programacion/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MODELOS DE BASE DE DATOS.png" />
-    <entry file="file://$PROJECT_DIR$/inscripcion/migrations/0003_auto_20170221_2106.py" />
-    <entry file="file://$PROJECT_DIR$/control_bienestar/settings.py" />
-    <entry file="file://$PROJECT_DIR$/profesor/forms.py" />
-    <entry file="file://$PROJECT_DIR$/requierements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="30" column="77" lean-forward="false" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/actividades/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-573">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inscripcion/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -580,49 +900,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/programacion/forms.py">
+    <entry file="file://$PROJECT_DIR$/inscripcion/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="450">
+          <caret line="36" column="68" lean-forward="false" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/programacion/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
+        <state relative-caret-position="795">
           <caret line="56" column="15" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inscripcion/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="36" column="68" lean-forward="false" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inscripcion/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requierements.txt" />
+    <entry file="file://$PROJECT_DIR$/requierements.txt" />
+    <entry file="file://$PROJECT_DIR$/MODELOS DE BASE DE DATOS.png" />
+    <entry file="file://$PROJECT_DIR$/inscripcion/migrations/0003_auto_20170221_2106.py" />
+    <entry file="file://$PROJECT_DIR$/profesor/forms.py" />
+    <entry file="file://$PROJECT_DIR$/requierements.txt" />
+    <entry file="file://$PROJECT_DIR$/inscripcion/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/programacion/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/programacion/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
+        <state relative-caret-position="420">
           <caret line="30" column="77" lean-forward="false" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actividades/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscripcion/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="36" column="68" lean-forward="false" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/programacion/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="56" column="15" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscripcion/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control_bienestar/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control_bienestar/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="139" column="8" lean-forward="false" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/modelo-DB.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/use-case-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/control_bienestar/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
