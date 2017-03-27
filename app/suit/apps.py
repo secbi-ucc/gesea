@@ -43,7 +43,7 @@ class DjangoSuitConfig(AppConfig):
     )
 
     # Automatically add home link
-    menu_show_home = False
+    menu_show_home = True
 
     # Define callback / handler to change menu before it is getting rendered
     menu_handler = None

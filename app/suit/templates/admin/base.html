@@ -14,9 +14,10 @@
 
 {% block branding %}
     <h1 id="site-name">
-        <a href="{% url 'admin:index' %}">
-            Bienestar Universitario
-            <span class="header-label">Administrador</span></a>
+        <a href="/">
+            <img style="width: 100px; float:left"  class="logo-menu" src="{% static 'assets/images/logo_menu.png' %}" alt="logo">
+            <p style="margin-top: 10px">Bienestar Universitario</p>
+            <span style="float: left" class="header-label">Monteria</span></a>
     </h1>
 {% endblock %}
 
@@ -30,18 +31,18 @@
 
 {% block usertools %}
     {% if has_permission %}
+
         <div id="user-tools" class="suit-user-tools">
             {% block welcome-msg %}
                 <span class="welcome">
-                Welcome,
                 <strong>{% firstof user.get_short_name user.get_username %}</strong>.
             </span>
+
             {% endblock %}
             <div class="user-links">
             {% block userlinks %}
                 {% if site_url %}
-                    <a href="{{ site_url }}" class="icon-link view-site-link" data-title="{% trans 'View site' %}">{% trans 'View site' %}</a>
-                    <span class="separator">/</span>
+
 
                 {% endif %}
                 {% if user.is_active and user.is_staff %}
@@ -52,8 +53,7 @@
                     {% endif %}
                 {% endif %}
                 {% if user.has_usable_password %}
-                    <a href="{% url 'admin:password_change' %}" class="icon-link change-password-link" data-title="{% trans 'Change password' %}">{% trans 'Change password' %}</a>
-                    <span class="separator">/</span>
+                   /
                 {% endif %}
                 <a href="{% url 'admin:logout' %}" class="icon-link logout-link" data-title="{% trans 'Log out' %}">{% trans 'Log out' %}</a>
             {% endblock %}
@@ -78,7 +78,7 @@
                         <div class="col-xs-12 col-sm-3 footer-links">
                             {% block footer_links %}
 
-                                <a href="#" target="_blank">Report un problema</a>
+
                             {% endblock %}
                         </div>
 
@@ -86,7 +86,7 @@
                             {% block copyright %}
 
                                 <br>Desarrollado por
-                                <a href="#" target="_blank">SECBI</a>
+                                <a href="https://github.com/secbi-ucc" target="_blank">SECBI</a>
                             {% endblock %}
                         </div>
 
@@ -129,3 +129,5 @@
 
 {#    <div> <!-- Fix/close div previously closed by footer -->#}
 {% endblock %}
+
+
