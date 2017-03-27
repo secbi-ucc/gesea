@@ -5,14 +5,16 @@ from django.contrib.auth.views import login
 from django.contrib.auth.decorators import login_required
 
 
-@login_required ( login_url = '/login/' )
 def inicio(request):
 
 
     return render(request, 'core/inicio.html', {})
 
-@login_required ( login_url = '/login/' )
+@login_required ()
 def no_permitido(request):
 
 
     return render(request, 'core/no_permitido.html', {})
+
+
+

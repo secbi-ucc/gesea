@@ -7,12 +7,10 @@
     <title></title>
     <!-- core CSS -->
     <link href="{% static "assets/css/bootstrap.min.css" %}" rel="stylesheet">
-    <link href="{% static "assets/css/font-awesome.min.css"%}" rel="stylesheet">
     <link href="{% static "assets/css/animate.min.css"%}" rel="stylesheet">
     <link href="{% static "assets/css/prettyPhoto.css"%}" rel="stylesheet">
     <link href="{% static "assets/css/main.css"%}" rel="stylesheet">
     <link href="{% static "assets/css/responsive.css"%}" rel="stylesheet">
-    <link href="{% static "assets/css/Styles.css"%}" rel="stylesheet">
   </head>
   <body>
     <header id="header">
@@ -25,55 +23,44 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img  class="logo-menu" src="{% static "assets/images/logo_menu.png" %}" alt="logo"></a>
+                    <a class="navbar-brand" href="index.html"><img style="width: 100px"  class="logo-menu" src="{% static "assets/images/logo_menu.png" %}" alt="logo"></a>
                 </div>
 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                       <li class="dropdown">
-                          <a href="{% url "actividades-lista"%}" class="dropdown-toggle" data-toggle="dropdown">Actividades<i class="fa fa-angle-down"></i></a>
+                          <a href="" class="dropdown-toggle" data-toggle="dropdown">Actividades<i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu">
-                              <li><a href="{% url "servicios-lista"%}">Lista Servicios</a></li>
-                              <li><a href="{% url "servicio-nuevo"%}">Nuevo Servicio</a></li>
-                              <li><a href="{% url "tipoactividades-lista"%}">Lista Tipo Actividades</a></li>
-                              <li><a href="{% url "tipoactividades-nuevo"%}">Nuevo Tipo Actividad</a></li>
-                              <li><a href="{% url "actividades-lista"%}">Lista Actividades</a></li>
-                              <li><a href="{% url "actividades-nueva"%}">Nueva Actividad</a></li>
+                              <li><a href="">Lista Servicios</a></li>
+                              <li><a href="">Nuevo Servicio</a></li>
+                              <li><a href="">Lista Tipo Actividades</a></li>
+                              <li><a href="">Nuevo Tipo Actividad</a></li>
+                              <li><a href="">Lista Actividades</a></li>
+                              <li><a href="">Nueva Actividad</a></li>
                           </ul>
                       </li>
                       <li class="dropdown">
-                          <a href="{% url "Lista-profesor"%}" class="dropdown-toggle" data-toggle="dropdown">Profesores<i class="fa fa-angle-down"></i></a>
+                          <a href="" class="dropdown-toggle" data-toggle="dropdown">Profesores<i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu">
-                              <li><a href="{% url "agregar-profesor"%}">Nuevo Profesor</a></li>
-                              <li><a href="{% url "Lista-profesor"%}">Lista Profesores</a></li>
+                              <li><a href="">Nuevo Profesor</a></li>
+                              <li><a href="">Lista Profesores</a></li>
 
                           </ul>
                       </li>
                       <li class="dropdown">
-                          <a href="{% url "programacion-lista"%}" class="dropdown-toggle" data-toggle="dropdown">Programacion<i class="fa fa-angle-down"></i></a>
+                          <a href="" class="dropdown-toggle" data-toggle="dropdown">Programacion<i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu">
-                              <li><a href="{% url "horario-lista"%}">Lista Horarios</a></li>
+                              <li><a href="">Lista Horarios</a></li>
                               <li><a href="#">Nuevo Horario</a></li>
-                              <li><a href="{% url "dias-lista"%}">Lista Dias</a></li>
-                              <li><a href="{% url "dia-nuevo"%}">Nuevo Dia</a></li>
-                              <li><a href="{% url "lugar-lista"%}">Lista Lugares</a></li>
-                              <li><a href="{% url "lugar-nuevo"%}">Nuevo Lugar</a></li>
-                              <li><a href="{% url "programacion-lista"%}">Lista Programacion</a></li>
-                              <li><a href="{% url "programacion-nueva"%}">Nueva Programacion</a></li>
+                              <li><a href="">Lista Dias</a></li>
+                              <li><a href="">Nuevo Dia</a></li>
+                              <li><a href="">Lista Lugares</a></li>
+                              <li><a href="">Nuevo Lugar</a></li>
+                              <li><a href="">Lista Programacion</a></li>
+                              <li><a href="">Nueva Programacion</a></li>
                           </ul>
                       </li>
-                        <li><a href="{% url "lista-estudiantes"%}">Inscripcion</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-item.html">Blog Single</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="shortcodes.html">Shortcodes</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact-us.html">Contact</a></li>
+                        <li><a href="">Inscripcion</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->

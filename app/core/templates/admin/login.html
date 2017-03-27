@@ -1,0 +1,21 @@
+{% extends 'admin/login.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block branding %}
+    <div class="suit-login-graphic">
+        <img style="width: 80px"  class="logo-menu" src="{% static 'assets/images/logo_menu.png'%}" alt="logo">
+    </div>
+    {{ block.super }}
+{% endblock %}
+
+{% block footer %}
+    <p style="margin: 0; padding: 1rem 0; background-color: #F1F1F1">
+        <span class="text-muted">Para demostracion: </span>
+        <br/>
+        Usuario: <strong>ucc</strong><br/>
+        Contraseña: <strong>bienestar</strong>
+    </p>
+    {{ block.super }}
+{% endblock %}
+
