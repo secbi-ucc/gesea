@@ -38,23 +38,24 @@ class TipoActividad(models.Model):
     Codigo_tipoActividad = models.CharField(max_length=10,unique=True)
     nombre = models.CharField(max_length=50, choices=TIPOS_ACTIVIDADES)
     class Meta:
-        verbose_name_plural = "Tipo Actividad"
+        verbose_name_plural = "Tipos de actividades"
 
     def __unicode__(self):
         return unicode(self.nombre)
 
 #Modelo de la clase actividad
 class Actividad(models.Model):
+
     ESTADOS_ACTIVIDAD = (
         ('ABIERTA', 'Abierta'),
         ('CERRADA', 'Cerrada'),
     )
+    Codigo_actividad = models.CharField(max_length=10, unique=True)
     servicio =  models.ForeignKey(Servicio)
-    Codigo_actividad = models.CharField(max_length=10,unique=True)
     tipo_actividad = models.ForeignKey(TipoActividad)
     Estado_actividad =  models.CharField(max_length=30, choices=ESTADOS_ACTIVIDAD, default='ABIERTA')
     Cupo_Actividad = models.IntegerField(max_length = 5)
     class Meta:
-        verbose_name_plural = "Actividad"
+        verbose_name_plural = "Actividades"
     def __unicode__(self):
         return unicode(self.tipo_actividad)

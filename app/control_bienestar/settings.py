@@ -45,7 +45,6 @@ INSTALLED_APPS = (
     'actividades',
     'profesor',
     'programacion',
-
     'inscripcion',
     'import_export',
 )

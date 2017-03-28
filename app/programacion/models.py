@@ -6,6 +6,8 @@ from django.utils import timezone
 class Horario(models.Model):
     Hora_Inicio = models.TimeField(null=True)
     Hora_Final = models.TimeField(null=True)
+    class Meta:
+        verbose_name_plural = "Horas"
 
     def __unicode__(self):
         return unicode(str(self.Hora_Inicio) + " - " + str(self.Hora_Final))
@@ -14,7 +16,7 @@ class Horario(models.Model):
 class Lugar(models.Model):
     NombreLugar = models.CharField(max_length=30)
     class Meta:
-        verbose_name_plural = "Lugar"
+        verbose_name_plural = "Lugares"
     def __unicode__(self):
         return unicode(self.NombreLugar)
 
@@ -32,7 +34,7 @@ class DiaActividad(models.Model):
     Dia_Actividad = models.CharField(max_length=10,choices=Diaactidad)
     Horario =  models.ForeignKey(Horario)
     class Meta:
-        verbose_name_plural = "Dia Actividad"
+        verbose_name_plural = "Dias Actividades"
 
     def __unicode__(self):
         return unicode(self.Dia_Actividad + "-" +  str(self.Horario))
@@ -58,6 +60,8 @@ class Programacion(models.Model):
         return ",".join([str(p) for p in self.Dia_semana.all()])
 
     class Meta:
-        verbose_name_plural = "Programacion"
+        verbose_name_plural = "Actividades Programadas"
+        verbose_name = "Actividad pogramada"
+
     def __unicode__(self):
         return unicode(self.actividad)

@@ -22,8 +22,9 @@ class EstudianteResource(resources.ModelResource):
 		export_order = ('Ciclo_Lectivo', 'Programa_Academico','ID_Estudiante','Tipo_Documento','Nro_Documento', 'Primer_Apellido', 'Segundo_Apellido', 'Primer_Nombre', 'Segundo_Nombre', 'Nro_Telefonico', 'Correo_Institucional','Descripcion')
 		fields = ('Ciclo_Lectivo', 'Programa_Academico','ID_Estudiante','Tipo_Documento','Nro_Documento', 'Primer_Apellido', 'Segundo_Apellido', 'Primer_Nombre', 'Segundo_Nombre', 'Nro_Telefonico', 'Correo_Institucional','Descripcion')
 
+
 class EstudianteAdmin(ImportExportModelAdmin):
-    search_fields = ('Primer_Apellido', 'Segundo_Apellido',"Nro_Documento","Primer_Nombre")
+    search_fields = ('Primer_Apellido', 'Segundo_Apellido','Nro_Documento','Primer_Nombre', 'Segundo_Nombre', 'ID_Estudiante')
     list_filter = ('Ciclo_Lectivo','Programa_Academico')
     list_display = ['Ciclo_Lectivo', 'Programa_Academico','ID_Estudiante','Nro_Documento', 'Primer_Apellido', 'Segundo_Apellido', 'Primer_Nombre', 'Segundo_Nombre', 'Nro_Telefonico']
     resource_class = EstudianteResource
@@ -31,12 +32,19 @@ class EstudianteAdmin(ImportExportModelAdmin):
 
 
 class Inscripciones (admin.ModelAdmin):
+    search_fields = ('estudiante__Primer_Nombre',)
+    list_filter = ('programacion', 'fecha_inscripcion' )
+    list_display = ['fecha_inscripcion','programacion', 'nombre_completo', 'id_ucc']
+    raw_id_fields = ('estudiante', 'programacion' )
 
-	list_filter = ('programacion__id',)
+    def nombre_completo(self, obj):
+     return obj.estudiante.Primer_Nombre + " " + obj.estudiante.Segundo_Nombre + " " + obj.estudiante.Primer_Apellido + " " + obj.estudiante.Segundo_Apellido
 
-	list_display = ['fecha_inscripcion','programacion', 'estudiante']
-	class Meta:
-		model = Inscripcion
+    def id_ucc(self, obj):
+     return obj.estudiante.ID_Estudiante
+
+class Meta:
+      model = Inscripcion
 
 class Estudiante (admin.ModelAdmin):
 

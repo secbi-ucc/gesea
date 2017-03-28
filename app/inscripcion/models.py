@@ -46,7 +46,7 @@ class Estudiantes(models.Model):
 
 
     def __unicode__(self):
-        return unicode(self.ID_Estudiante)
+        return unicode(self.Primer_Nombre)
 
 
 
@@ -55,5 +55,8 @@ class Inscripcion(models.Model):
     estudiante = models.ForeignKey(Estudiantes, null=True)
     fecha_inscripcion = models.DateField(auto_now=True, null=True)
 
+    class Meta:
+        verbose_name_plural = "Estudiantes Inscritos"
+        verbose_name = "Inscripcion individual"
     def __unicode__(self):
         return unicode(self.programacion)

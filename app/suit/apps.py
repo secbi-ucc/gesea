@@ -34,11 +34,29 @@ class DjangoSuitConfig(AppConfig):
     # Define menu
     #: :type: list of suit.menu.ParentItem
     menu = (
-        ParentItem('Inscripcion', children=[
+        ParentItem('Listados', children=[
             ChildItem(model='inscripcion.estudiantes'),
+            ChildItem(model='profesor.profesor'),
             ChildItem(model='inscripcion.programa'),
             #ChildItem('Custom view', url='/admin/custom/'),
-        ], icon='fa fa-leaf'),
+        ]),
+        ParentItem('Actividades', children=[
+            ChildItem(model='actividades.actividad'),
+            ChildItem(model='actividades.tipoactividad'),
+            ChildItem(model='actividades.servicio'),
+
+
+        ]),
+        ParentItem('Programacion', children=[
+            ChildItem(model='programacion.horario'),
+            ChildItem(model='programacion.diaactividad'),
+            ChildItem(model='programacion.lugar'),
+        ]),
+        ParentItem('Inscriciones', children=[
+            ChildItem(model='inscripcion.inscripcion'),
+            ChildItem(model='programacion.programacion'),
+            # ChildItem('Custom view', url='/admin/custom/'),
+        ]),
 
     )
 

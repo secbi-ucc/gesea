@@ -12,6 +12,6 @@ class Profesor(models.Model):
     Identificacion = models.IntegerField(unique=True)
     estado = models.CharField(max_length=20, choices=ESTADOS_PROFESOR, default='ACTIVO')
     class Meta:
-        verbose_name_plural = "Profesor"
+        verbose_name_plural = "Profesores"
     def __unicode__(self):
         return unicode(self.user)
