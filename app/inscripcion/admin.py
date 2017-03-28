@@ -26,7 +26,7 @@ class EstudianteResource(resources.ModelResource):
 class EstudianteAdmin(ImportExportModelAdmin):
     search_fields = ('Primer_Apellido', 'Segundo_Apellido','Nro_Documento','Primer_Nombre', 'Segundo_Nombre', 'ID_Estudiante')
     list_filter = ('Ciclo_Lectivo','Programa_Academico')
-    list_display = ['Ciclo_Lectivo', 'Programa_Academico','ID_Estudiante','Nro_Documento', 'Primer_Apellido', 'Segundo_Apellido', 'Primer_Nombre', 'Segundo_Nombre', 'Nro_Telefonico']
+    list_display = ['ID_Estudiante', 'Programa_Academico','Nro_Documento', 'Primer_Apellido', 'Segundo_Apellido', 'Primer_Nombre', 'Segundo_Nombre', 'Nro_Telefonico']
     resource_class = EstudianteResource
 
 

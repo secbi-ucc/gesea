@@ -19,8 +19,8 @@ class Dia_Semana (admin.ModelAdmin):
 
 class ThingInline(admin.TabularInline):
 	model = Inscripcion
-	min_num = 3
-	extra = 1
+	min_num = 0
+	extra = 0
 	raw_id_fields = ('estudiante',)
 	verbose_name_plural = 'Estudiantes Inscritos'
 	suit_form_inlines_hide_original = True
