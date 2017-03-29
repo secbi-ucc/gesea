@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 from django.db import models
 from programacion.models import Programacion
 from actividades.models import Actividad
+from django.utils.timezone import now
 
 
 # Create your models here.
@@ -44,6 +45,10 @@ class Estudiantes(models.Model):
     Ciclo_Lectivo = models.CharField(max_length=30, null=True)
     Descripcion = models.CharField(max_length=30, null=True)
 
+    def nombre_completo(self):
+        return self.Primer_Nombre + " " + self.Segundo_Nombre + " " + self.Primer_Apellido + " " + self.Segundo_Apellido
+
+
 
     def __unicode__(self):
         return unicode(self.Primer_Nombre)
@@ -60,3 +65,17 @@ class Inscripcion(models.Model):
         verbose_name = "Inscripcion individual"
     def __unicode__(self):
         return unicode(self.programacion)
+
+
+class AsistenciaEstudiante(models.Model):
+
+    programacion = models.ForeignKey(Programacion)
+    estudiante = models.ForeignKey(Estudiantes)
+    fecha_asistencia = models.DateField(default=now)
+    asistio = models.NullBooleanField(null=True, default=False)
+
+    class Meta:
+        verbose_name_plural = "Hisorial de asistencia"
+        verbose_name = "Historia Asistencia"
+    def __unicode__(self):
+        return unicode(self.estudiante)

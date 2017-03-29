@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from .models import Estudiantes, Programa, Inscripcion
+from .models import Estudiantes, Programa, Inscripcion, AsistenciaEstudiante
 from import_export import resources
 #
 from import_export.widgets import ForeignKeyWidget
@@ -31,6 +31,7 @@ class EstudianteAdmin(ImportExportModelAdmin):
 
 
 
+
 class Inscripciones (admin.ModelAdmin):
     search_fields = ('estudiante__Primer_Nombre',)
     list_filter = ('programacion', 'fecha_inscripcion' )
@@ -43,17 +44,22 @@ class Inscripciones (admin.ModelAdmin):
     def id_ucc(self, obj):
      return obj.estudiante.ID_Estudiante
 
-class Meta:
-      model = Inscripcion
 
-class Estudiante (admin.ModelAdmin):
+class AsistenciaEstudianteAdmin (admin.ModelAdmin):
+    search_fields = ('estudiante__Primer_Nombre',)
+    list_filter = ('programacion', 'fecha_asistencia' )
+    list_display = ['fecha_asistencia','programacion', 'nombre_completo', 'id_ucc']
+    readonly_fields = ('fecha_asistencia', 'asistio' )
 
-	class Meta:
-		model = Estudiantes
+    def nombre_completo(self, obj):
+     return obj.estudiante.Primer_Nombre + " " + obj.estudiante.Segundo_Nombre + " " + obj.estudiante.Primer_Apellido + " " + obj.estudiante.Segundo_Apellido
 
+    def id_ucc(self, obj):
+     return obj.estudiante.ID_Estudiante
 
 
 
 admin.site.register(Inscripcion, Inscripciones)
 admin.site.register(Estudiantes, EstudianteAdmin)
 admin.site.register(Programa)
+admin.site.register(AsistenciaEstudiante, AsistenciaEstudianteAdmin)

@@ -52,10 +52,15 @@ class DjangoSuitConfig(AppConfig):
             ChildItem(model='programacion.diaactividad'),
             ChildItem(model='programacion.lugar'),
         ]),
-        ParentItem('Inscriciones', children=[
+        ParentItem('Inscripciones', children=[
             ChildItem(model='inscripcion.inscripcion'),
             ChildItem(model='programacion.programacion'),
             # ChildItem('Custom view', url='/admin/custom/'),
+        ]),
+        ParentItem('Asistencia', children=[
+            ChildItem('Tomar asistencia', url='/admin/asistencia/'),
+            ChildItem('Mi lista ', url='/admin/asistencia/1'),
+            ChildItem(model='inscripcion.asistenciaestudiante'),
         ]),
 
     )

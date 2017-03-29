@@ -1,0 +1,79 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            Listado de asistencia
+        </div>
+        <div class="card-block">
+<div class="input-group">
+  <span class="input-group-addon" id="sizing-addon2">Profesor: </span>
+  <input readonly value="{{ p.profesor }} type="text" class="form-control"  aria-describedby="sizing-addon2">
+
+</div>
+            <br>
+            <div class="input-group">
+  <span class="input-group-addon" id="sizing-addon2">Actividad: </span>
+  <input readonly value="{{ p }}" type="text" class="form-control"  aria-describedby="sizing-addon2">
+
+</div>
+            <br>
+            <small>Fecha: {% now "M-d-y" %}</small>
+            <br>
+
+        {% if show_list %}
+
+
+
+            <table class="table table-striped table-hover ">
+  <thead>
+    <tr><th>#</th>
+      <th>Id estudiante</th>
+      <th>Nombres</th>
+      <th>Asistencia</th>
+        <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in a %}
+    <tr>
+    <td>{{ forloop.counter }}</td>
+      <td>{{ i.estudiante.ID_Estudiante }}</td>
+      <td>{{ i.estudiante.nombre_completo }}</td>
+      <td>
+
+            {% if i.asistio %}
+          <form action="{% url "no-asistio" i.id%}" method="post">
+            {% csrf_token %}
+            <input type="checkbox"  onChange="this.form.submit()" checked >
+           </form>
+      {% else %}
+              <form action="{% url "si-asistio" i.id %}" method="post">
+            {% csrf_token %}
+            <input type="checkbox"  onChange="this.form.submit()" >
+           </form>
+      {% endif %}
+
+
+      </td>
+    <td>{{i.fecha_asistencia}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+            {% else %}
+            <br>
+            <form action="" method="post">
+            {% csrf_token %}
+            <input name="tomar_lista" class="btn btn-success"  type="submit" value="Tomar Asistencia" >
+           </form>
+                {% endif %}
+
+        </div>
+    </div>
+
+
+
+{% endblock %}
