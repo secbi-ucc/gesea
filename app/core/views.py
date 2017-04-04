@@ -58,7 +58,7 @@ def listado_asistencia(request, is_refresh=None):
             for i in range(len(e)):
                 AsistenciaEstudiante(programacion=p, estudiante=e[i]).save()
 
-        a = AsistenciaEstudiante.objects.filter(programacion = p)
+        a = AsistenciaEstudiante.objects.filter(programacion = p, fecha_asistencia=now())
 
 
 

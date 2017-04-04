@@ -10,7 +10,7 @@
         <div class="card-block">
 <div class="input-group">
   <span class="input-group-addon" id="sizing-addon2">Profesor: </span>
-  <input readonly value="{{ p.profesor }} type="text" class="form-control"  aria-describedby="sizing-addon2">
+  <input readonly value="{% firstof user.get_short_name user.get_username %}" class="form-control"  aria-describedby="sizing-addon2">
 
 </div>
             <br>

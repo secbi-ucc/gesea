@@ -140,3 +140,8 @@ STATIC_URL = '/static/'
 
 
 MEDIA_URL = '/media/'
+
+try:
+    from .production_settings import *
+except ImportError:
+    pass
