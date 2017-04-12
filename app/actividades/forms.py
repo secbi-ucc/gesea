@@ -1,6 +1,6 @@
 from django import forms
 from .models import Actividad
-from .models import Servicio
+from .models import Area
 
 
 class ActividadForm(forms.ModelForm):
@@ -12,5 +12,5 @@ class ActividadForm(forms.ModelForm):
 class ServicioForm(forms.ModelForm):
 
     class Meta:
-        model = Servicio
+        model = Area
         fields = ['Codigo_servicio','nombre']

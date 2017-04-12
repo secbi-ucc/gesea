@@ -36,14 +36,14 @@ class DjangoSuitConfig(AppConfig):
     menu = (
         ParentItem('Listados', children=[
             ChildItem(model='inscripcion.estudiantes'),
-            ChildItem(model='profesor.profesor'),
             ChildItem(model='inscripcion.programa'),
+            ChildItem(model='profesor.instructor'),
+
             #ChildItem('Custom view', url='/admin/custom/'),
         ]),
         ParentItem('Actividades', children=[
             ChildItem(model='actividades.actividad'),
-            ChildItem(model='actividades.tipoactividad'),
-            ChildItem(model='actividades.servicio'),
+            ChildItem(model='actividades.area'),
 
 
         ]),
@@ -61,6 +61,12 @@ class DjangoSuitConfig(AppConfig):
             ChildItem('Tomar asistencia', url='/admin/asistencia/'),
             ChildItem('Mi lista ', url='/admin/asistencia/1'),
             ChildItem(model='inscripcion.asistenciaestudiante'),
+        ]),
+        ParentItem('Usuarios', children=[
+            ChildItem(model='auth.user'),
+            ChildItem(model='auth.group'),
+
+
         ]),
 
     )

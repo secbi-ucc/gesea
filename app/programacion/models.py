@@ -1,6 +1,6 @@
 from django.db import models
-from profesor.models import Profesor
-from actividades.models import Actividad ,Servicio
+from profesor.models import Instructor
+from actividades.models import Actividad ,Area
 from django.utils import timezone
 
 class Horario(models.Model):
@@ -50,7 +50,7 @@ class Programacion(models.Model):
         ('OTRO', 'Otro'),
     )
     TipodeParticipacion = models.CharField(max_length=30, choices=Tipo_participacion)
-    profesor = models.ForeignKey(Profesor, null=True, blank=True)
+    Instructor = models.ForeignKey(Instructor, null=True, blank=True)
     lugarActividad = models.ForeignKey(Lugar)
     Dia_semana =  models.ManyToManyField(DiaActividad)
     Fecha_Inicio = models.DateTimeField(null=True)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Servicio, Actividad, RegistroActividad
+from .models import Area, Actividad, RegistroActividad
 
 # Register your models here.
 class Actividades (admin.ModelAdmin):
@@ -16,26 +16,26 @@ class ThingInline(admin.TabularInline):
 	model = RegistroActividad
 	min_num = 0
 	extra = 0
-	raw_id_fields = ('servicio',)
+	raw_id_fields = ('area',)
 	verbose_name_plural = 'Reg Actividades'
 	suit_form_inlines_hide_original = True
 
-class Servicios (admin.ModelAdmin):
-	list_display = ['id','Codigo_servicio', 'nombre']
+class Areas (admin.ModelAdmin):
+	list_display = ['id','Codigo_area', 'nombre']
 	inlines = [
 			ThingInline,
 		]
 
 	class Meta:
-		model = Servicio
+		model = Area
 
 class registroactividad (admin.ModelAdmin):
-	list_display = ['servicio','actividad']
-	raw_id_fields = ('servicio','actividad')
+	list_display = ['area','actividad']
+	raw_id_fields = ('area','actividad')
 	class Meta:
 		model = RegistroActividad
 
 
-admin.site.register(Servicio, Servicios)
+admin.site.register(Area, Areas)
 admin.site.register(RegistroActividad, registroactividad)
 admin.site.register(Actividad, Actividades)

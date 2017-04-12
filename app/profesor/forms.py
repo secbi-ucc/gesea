@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import Profesor
+from .models import Instructor
 
 
 class UserForm(forms.ModelForm):
@@ -13,5 +13,5 @@ class UserForm(forms.ModelForm):
 class ProfesorForm(forms.ModelForm):
 
     class Meta:
-        model = Profesor
+        model = Instructor
         fields = ['id_ucc','Identificacion','estado']

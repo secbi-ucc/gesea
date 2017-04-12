@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Actividad
-from .models import Servicio
+from .models import Area
 from .models import TipoActividad
 from django.shortcuts import get_object_or_404
 from .forms import ActividadForm

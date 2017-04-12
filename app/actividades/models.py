@@ -1,14 +1,8 @@
 from django.db import models
 #Modelo de la clase servicio
-class Servicio(models.Model):
-    NOMBRES_SERVICIOS = (
-        ('PROMOCION DE LA SALUD', 'Promocion de la salud'),
-        ('DEPORTES', 'Deportes'),
-        ('PATRIMONIO CULTURAL', 'Patrimonio cultural'),
-        ('ORIENTACION Y ACOMPANAMIENTO', 'Orientacion y acompanamiento'),
-    )
-    Codigo_servicio = models.CharField(max_length=10,unique=True)
-    nombre = models.CharField(max_length=50, choices=NOMBRES_SERVICIOS)
+class Area(models.Model):
+    Codigo_area = models.CharField(max_length=10,unique=True)
+    nombre = models.CharField(max_length=250)
 
     def __unicode__(self):
         return unicode(self.nombre)
@@ -31,7 +25,7 @@ class Actividad(models.Model):
 
 #Modelo de la clase registro de actividad
 class RegistroActividad(models.Model):
-    servicio =  models.ForeignKey(Servicio)
+    area =  models.ForeignKey(Area)
     actividad =  models.ForeignKey(Actividad)
     class Meta:
         verbose_name_plural = "Registro Actividad"

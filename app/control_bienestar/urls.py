@@ -6,8 +6,8 @@ from core import views
 urlpatterns = [
 
     url(r'^$', include('core.urls')),
-    url(r'^admin/asistencia/$', views.listado_asistencia, name='listado-asistencia'),
-    url(r'^admin/asistencia/(?P<is_refresh>\w+)$', views.listado_asistencia, name='listado-asistencia'),
+    url(r'^admin/asistencia/', views.listado_asistencia, name='listado-asistencia'),
+    url(r'^admin/asistencia/(?P<is_refresh>\w+)', views.listado_asistencia, name='listado-asistencia'),
     url(r'^admin/', admin.site.urls),
 
     url(r'^estudiante/asistio/(?P<asistencia_id>[\w\-]+)', views.flag_asistio, name='si-asistio'),

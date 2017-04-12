@@ -1,9 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Profesor(models.Model):
+class Instructor(models.Model):
 
-    ESTADOS_PROFESOR = (
+    ESTADOS_INSTRUCTOR = (
         ('ACTIVO', 'Activo'),
         ('INACTIVO', 'Inactivo'),
     )
@@ -13,9 +13,9 @@ class Profesor(models.Model):
     Nombre = models.CharField(max_length=30)
     Primer_Apellido = models.CharField(max_length=20)
     Segundo_Apellido = models.CharField(max_length=20)
-    estado = models.CharField(max_length=20, choices=ESTADOS_PROFESOR, default='ACTIVO')
+    estado = models.CharField(max_length=20, choices=ESTADOS_INSTRUCTOR, default='ACTIVO')
     class Meta:
-        verbose_name_plural = "Profesores"
+        verbose_name_plural = "Instructores"
 
     def __unicode__(self):
         return unicode(self.Nombre)

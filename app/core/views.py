@@ -4,7 +4,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import admin
 from inscripcion.models import Inscripcion, Estudiantes
 from programacion.models import Programacion
-from profesor.models import Profesor
+from profesor.models import Instructor
 from inscripcion.models import AsistenciaEstudiante
 from django.utils.timezone import now
 from django.views.decorators.http import require_POST
@@ -40,9 +40,9 @@ def listado_asistencia(request, is_refresh=None):
 
 
     user = request.user
-    pr = Profesor.objects.get(user = user)
+    pr = Instructor.objects.get(user = user)
     a = None
-    p = Programacion.objects.filter(profesor=pr).last()
+    p = Programacion.objects.filter(Instructor=pr).last()
     i = Inscripcion.objects.filter(programacion=p)
 
     show_list = False

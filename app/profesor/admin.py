@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import Profesor
+from .models import Instructor
 
-class Profesores (admin.ModelAdmin):
+class Instructores (admin.ModelAdmin):
 	list_display = ['id_ucc','user','Identificacion','Nombre','Primer_Apellido','Segundo_Apellido','estado']
 	class Meta:
-		model = Profesor
+		model = Instructor
 
-admin.site.register(Profesor,Profesores)
+admin.site.register(Instructor,Instructores)
 
 # Register your models here.
