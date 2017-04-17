@@ -10,7 +10,6 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('inscripcion', '0002_instructor'),
-        ('programacion', '0002_remove_programacion_instructor'),
     ]
 
     operations = [
