@@ -9,6 +9,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
+        ('programacion', '0001_initial'),
         ('inscripcion', '0002_instructor'),
     ]
 
