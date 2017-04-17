@@ -43,7 +43,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'actividades',
-    'profesor',
     'programacion',
     'inscripcion',
     'import_export',

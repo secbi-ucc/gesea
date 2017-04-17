@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from django.contrib import admin
-from .models import Estudiantes, Programa, Inscripcion, AsistenciaEstudiante
+from .models import Estudiantes, Programa, Inscripcion, AsistenciaEstudiante, Instructor
 from import_export import resources
-#
 from import_export.widgets import ForeignKeyWidget
 from import_export import fields
 from import_export.admin import ImportExportModelAdmin
@@ -57,8 +56,12 @@ class AsistenciaEstudianteAdmin (admin.ModelAdmin):
     def id_ucc(self, obj):
      return obj.estudiante.ID_Estudiante
 
+class Instructores (admin.ModelAdmin):
+	list_display = ['id_ucc','user','Identificacion','Nombre','Primer_Apellido','Segundo_Apellido','estado']
+	class Meta:
+		model = Instructor
 
-
+admin.site.register(Instructor,Instructores)
 admin.site.register(Inscripcion, Inscripciones)
 admin.site.register(Estudiantes, EstudianteAdmin)
 admin.site.register(Programa)

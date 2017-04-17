@@ -35,8 +35,8 @@ class Programaciones (admin.ModelAdmin):
 		return '%d' % Inscripcion.objects.filter(programacion=obj.id).count()
 		n_estudiantes_inscritos.short_description = 'Numero de inscritos'
 		n_estudiantes_inscritos.allow_tags = True
-	list_display = ['actividad','Instructor','lugarActividad','horario','estudiantes_inscritos','n_estudiantes_inscritos']
-	list_filter = ['actividad', 'Instructor' ]
+	list_display = ['actividad','lugarActividad','horario','estudiantes_inscritos','n_estudiantes_inscritos']
+	list_filter = ['actividad' ]
 	inlines = [
 		ThingInline,
 	]

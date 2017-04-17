@@ -15,13 +15,13 @@ class Actividad(models.Model):
         ('CERRADA', 'Cerrada'),
     )
     Codigo_actividad = models.CharField(max_length=10, unique=True)
-    tipo_actividad = models.CharField(max_length=80)
+    tipo_actividad = models.CharField(max_length=80, null=True)
     Estado_actividad =  models.CharField(max_length=30, choices=ESTADOS_ACTIVIDAD, default='ABIERTA')
     Cupo_Actividad = models.IntegerField()
     class Meta:
         verbose_name_plural = "Actividades"
     def __unicode__(self):
-        return unicode(self.tipo_actividad)
+        return unicode(self.Codigo_actividad)
 
 #Modelo de la clase registro de actividad
 class RegistroActividad(models.Model):

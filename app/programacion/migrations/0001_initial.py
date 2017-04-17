@@ -11,7 +11,6 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('profesor', '0001_initial'),
         ('actividades', '0001_initial'),
     ]
 
@@ -55,7 +54,7 @@ class Migration(migrations.Migration):
                 ('Fecha_Inicio', models.DateTimeField(null=True)),
                 ('Fecha_Final', models.DateTimeField(null=True)),
                 ('Dia_semana', models.ManyToManyField(to='programacion.DiaActividad')),
-                ('Instructor', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='profesor.Instructor')),
+                #('Instructor', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='profesor.Instructor')),
                 ('actividad', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='actividades.Actividad')),
                 ('lugarActividad', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='programacion.Lugar')),
             ],

@@ -37,7 +37,7 @@ class DjangoSuitConfig(AppConfig):
         ParentItem('Listados', children=[
             ChildItem(model='inscripcion.estudiantes'),
             ChildItem(model='inscripcion.programa'),
-            ChildItem(model='profesor.instructor'),
+            ChildItem(model='inscripcion.instructor'),
 
             #ChildItem('Custom view', url='/admin/custom/'),
         ]),
