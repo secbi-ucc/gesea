@@ -1,6 +1,47 @@
 {% extends "admin/base_site.html" %}
 {% load i18n %}
 
+{% block extrastyle %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+    .input-stepper {
+  background: white;
+  border: 2px solid #dedede;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.input-stepper button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.input-stepper button[disabled] {
+  cursor: not-allowed;
+  opacity: .4;
+}
+
+.input-stepper button i {
+   color: #07c;
+}
+
+.input-stepper input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  font-size: 15px;
+  text-align: center;
+  width: 36px;
+}
+    </style>
+
+{%endblock%}
 
 {% block content %}
     <div class="card">
@@ -32,8 +73,7 @@
     <tr><th>#</th>
       <th>Id estudiante</th>
       <th>Nombres</th>
-      <th>Asistencia</th>
-        <th>Fecha</th>
+      <th>Horas</th>
     </tr>
   </thead>
   <tbody>
@@ -43,8 +83,20 @@
       <td>{{ i.estudiante.ID_Estudiante }}</td>
       <td>{{ i.estudiante.nombre_completo }}</td>
       <td>
+          <form action="{% url "horas-asistencia" i.id%}" method="post">
+              {% csrf_token %}
+              <div class="input-stepper">
+              <button  class="minus"><i class="fa fa-minus"></i></button>
+                  <input  type="text" name="n_horas" value="{{  i.n_horas }}" />
+              <button  class="plus"><i class="fa fa-plus"></i></button>
+              </div>
+          </form>
+      </td>
+        <!---
+    <td>
 
-            {% if i.asistio %}
+
+        {% if i.asistio %}
           <form action="{% url "no-asistio" i.id%}" method="post">
             {% csrf_token %}
             <input type="checkbox"  onChange="this.form.submit()" checked >
@@ -57,8 +109,7 @@
       {% endif %}
 
 
-      </td>
-    <td>{{i.fecha_asistencia}}</td>
+    </td>-->
     </tr>
   {% endfor %}
   </tbody>
@@ -74,6 +125,122 @@
         </div>
     </div>
 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+
+
+
+/*
+
+    $(document).ready(function() {
+       $("#test").submit(function(event){
+            $.ajax({
+                 type:"POST",
+                 url:"/estudiante/horas-asistencia/{{ i.id }}",
+                 data: {
+                        'n_horas': $('#horas-asistencia').val() // from form
+                        },
+                 success: function(){
+                     //$('#message').html("<h2>Contact Form Submitted!</h2>")
+                     console.log("enviado")
+                 }
+            });
+            return false; //<---- move it here
+       });
+
+});
+*/
+  var stepper = function () {
+  var stepperNumber,
+      minusButton;
+
+  return {
+
+    allSteppers: $( '.input-stepper' ),
+
+    // check to see if the input is at '0'...
+    checkStepperNumber: function ( thisStepper ) {
+      stepperInput = $( thisStepper ).find( 'input' );
+      stepperNumber = stepperInput.val();
+      decrementButton = $( thisStepper ).find( 'button.minus' );
+
+      if ( stepperNumber === '0' || stepperNumber <= 0 ) {
+        // if so, disable the minus button.
+        decrementButton.prop( 'disabled', true );
+        stepperInput.val( 0 );
+      } else {
+        // if number is positive, enable the minus button
+        decrementButton.prop( 'disabled', false );
+      }
+
+    },
+
+    init: function () {
+      stepper.allSteppers.each( function ( index, element ) {
+        var thisStepperInput = $( element ).find( 'input' );
+        var thisMinusButton = $( element ).find( 'button.minus' );
+
+        if ( thisStepperInput.val() === '0' || thisStepperInput.val() <= 0 ) {
+          thisMinusButton.prop( 'disabled', true );
+          thisStepperInput.val( 0 );
+        } else {
+          // if number is positive, enable the minus button
+          thisMinusButton.prop( 'disabled', false );
+        }
+      });
+    }
+
+  }
+}();
+
+// on button.plus click ...
+$( '.input-stepper button.plus' ).on( 'click', function ( e ) {
+  thisStepper = $( e.target ).closest( '.input-stepper' );
+  stepperInput = thisStepper.find( 'input' );
+
+  // check the input value
+  stepperNumber = stepperInput.val();
+
+  // increment the input value
+  stepperNumber++;
+  stepperInput.val( stepperNumber );
+
+  // then check the stepper number
+  stepper.checkStepperNumber( thisStepper );
+});
+
+// on button.minus click ...
+$( '.input-stepper button.minus' ).on( 'click', function ( e ) {
+  thisStepper = $( e.target ).closest( '.input-stepper' );
+  stepperInput = thisStepper.find( 'input' );
+
+  // check the input value
+  stepperNumber = stepperInput.val();
+
+  // decrement the input value
+  stepperNumber--;
+  stepperInput.val( stepperNumber );
+
+  // then check the stepper number
+  stepper.checkStepperNumber( thisStepper );
+});
+
+// on input field blur ...
+$( '.input-stepper input' ).on( 'blur', function ( e ) {
+  thisStepper = $( e.target ).closest( '.input-stepper' );
+  // check the stepper number
+  stepper.checkStepperNumber( thisStepper );
+});
+
+// check the stepper number on load
+if ( $( '.input-stepper' ).length ) {
+  stepper.init();
+ }
+    </script>
+
 
 
 {% endblock %}
+
+

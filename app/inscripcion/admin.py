@@ -23,9 +23,18 @@ class EstudianteResource(resources.ModelResource):
 
 
 class EstudianteAdmin(ImportExportModelAdmin):
+
+    # Opciones de visualización
+    def reporte_asistencia(self, instance):
+        return "<a href='/admin/reporte/%s'> <i style='font-size:17px' class='fa fa-file-pdf-o' aria-hidden='true'></i>  </a>" % instance.ID_Estudiante
+
+    reporte_asistencia.short_description = "Reporte"
+    reporte_asistencia.allow_tags = True
+    reporte_asistencia.is_column = True
+
     search_fields = ('Primer_Apellido', 'Segundo_Apellido','Nro_Documento','Primer_Nombre', 'Segundo_Nombre', 'ID_Estudiante')
     list_filter = ('Ciclo_Lectivo','Programa_Academico')
-    list_display = ['ID_Estudiante', 'Programa_Academico','Nro_Documento', 'Primer_Apellido', 'Segundo_Apellido', 'Primer_Nombre', 'Segundo_Nombre', 'Nro_Telefonico']
+    list_display = ['ID_Estudiante', 'Programa_Academico','Nro_Documento', 'Primer_Apellido', 'Segundo_Apellido', 'Primer_Nombre', 'Segundo_Nombre', 'Nro_Telefonico', 'reporte_asistencia']
     resource_class = EstudianteResource
 
 
@@ -48,7 +57,8 @@ class AsistenciaEstudianteAdmin (admin.ModelAdmin):
     search_fields = ('estudiante__Primer_Nombre',)
     list_filter = ('programacion', 'fecha_asistencia' )
     list_display = ['fecha_asistencia','programacion', 'nombre_completo', 'id_ucc']
-    readonly_fields = ('fecha_asistencia', 'asistio' )
+    #readonly_fields = ('fecha_asistencia', 'asistio' )
+    raw_id_fields = ('estudiante', 'programacion')
 
     def nombre_completo(self, obj):
      return obj.estudiante.Primer_Nombre + " " + obj.estudiante.Segundo_Nombre + " " + obj.estudiante.Primer_Apellido + " " + obj.estudiante.Segundo_Apellido

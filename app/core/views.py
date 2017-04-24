@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import admin
@@ -20,6 +20,21 @@ def no_permitido(request):
 
     return render(request, 'core/no_permitido.html', {})
 
+@login_required ()
+def reporte_asistencia_estudiante(request, id_estudiante):
+
+    e = get_object_or_404(Estudiantes, ID_Estudiante=id_estudiante)
+    a = AsistenciaEstudiante.objects.filter(estudiante=e)
+
+
+    context = admin.site.each_context(request)
+    context.update({
+        'a': a,
+        'e': e
+    })
+
+
+    return render(request, 'core/reporte_asistencia_estudiante.html', context)
 
 @require_POST
 def flag_asistio(request, asistencia_id):
@@ -31,6 +46,14 @@ def flag_asistio(request, asistencia_id):
 def flag_no_asistio(request, asistencia_id):
     p = AsistenciaEstudiante.objects.get(id=asistencia_id)
     p.asistio = False
+    p.save()
+    return redirect("/admin/asistencia/1")
+
+
+@require_POST
+def agregar_horas_asistencia(request, asistencia_id):
+    p = AsistenciaEstudiante.objects.get(id=asistencia_id)
+    p.n_horas = request.POST.get("n_horas", "")
     p.save()
     return redirect("/admin/asistencia/1")
 
@@ -47,7 +70,10 @@ def listado_asistencia(request, is_refresh=None):
 
     show_list = False
 
+    print is_refresh
+
     if request.POST.get("tomar_lista", "") or is_refresh == '1':
+        print "ENTRE AQUI!!"
         show_list = True
         e = Estudiantes.objects.filter(ID_Estudiante__in=list(Inscripcion.objects.filter(programacion=p).values_list('estudiante', flat=True)))
 

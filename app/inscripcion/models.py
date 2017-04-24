@@ -33,6 +33,7 @@ class Estudiantes(models.Model):
         verbose_name_plural = "Estudiantes"
 
     ID_Estudiante = models.CharField(max_length=10, primary_key=True)
+    foto_url = models.URLField(null=True)
     Primer_Nombre= models.CharField(max_length=30, null=True)
     Segundo_Nombre = models.CharField(max_length=30, null=True)
     Primer_Apellido = models.CharField(max_length=30, null=True)
@@ -74,6 +75,7 @@ class AsistenciaEstudiante(models.Model):
     estudiante = models.ForeignKey(Estudiantes)
     fecha_asistencia = models.DateField(default=now)
     asistio = models.NullBooleanField(null=True, default=False)
+    n_horas = models.PositiveIntegerField(default=0)
 
     class Meta:
         verbose_name_plural = "Hisorial de asistencia"

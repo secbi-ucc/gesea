@@ -1,0 +1,151 @@
+{% extends "admin/base_site.html" %}
+{% load reportes %}
+{% load i18n %}
+
+
+{% block extrastyle %}
+    <script src="https://use.fontawesome.com/b7fd754cf7.js"></script>
+    <style>
+        #suit-nav{
+        display: none
+        }
+
+    .breadcrumbs{
+        display: none;
+    }
+
+    #suit-sub-nav {
+        display: none !important;
+    }
+
+    #user-tools{
+        display: none;
+    }
+
+    </style>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+
+            {% if e.foto_url %}
+                <img style="width:150px; height:150px; border-radius:50%" src="{{ e.foto_url }}" alt="" />
+
+            {% else %}
+
+            <img style="width:150px; height:150px; border-radius:50%" src="http://dk6kcyuwrpkrj.cloudfront.net/wp-content/uploads/sites/45/2014/05/avatar-blank.jpg" alt="" />
+            {% endif %}
+
+
+
+        <div style="display: inline-block; margin-left: 10px">
+
+
+          <h3 style="font-size:20px;">{{ e.nombre_completo }} </h3>
+            <small>ID: {{ e.ID_Estudiante }}</small>
+            <small>Correo: <a href="mailto:{{ e.Correo_Institucional }}">{{ e.Correo_Institucional }}</a></small>
+
+          <p>
+            {{ e.Programa_Academico }}
+          </p>
+
+
+
+        </div>
+
+
+      <h3 style="display: inline-block; float: right"> <i class="fa fa-certificate" aria-hidden="true"></i> Certificado 01 - Bienestar
+          <br>
+        <small>Fecha de emision: </small>
+      </h3>
+
+
+
+
+
+
+    <div class="card">
+  <div class="card-block">
+   Observacion del estudiante.
+  </div>
+</div>
+
+
+
+<p>
+  <strong><i class="fa fa-list-alt" aria-hidden="true"></i> Consolidado de asistencias:</strong>
+
+</p>
+
+    <table class="table table-striped table-hover table-bordered">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Nombre Actividad</th>
+      <th>Horas asistidas</th>
+    </tr>
+  </thead>
+  <tbody>
+     {% regroup a by programacion as grouped %}
+  {% for group in grouped %}
+  {% for obj in group.list %}
+    <tr>
+          {% ifchanged %}<td rowspan="{{ group.list|length }}">{{ obj.programacion }}</td>
+
+
+        <td>{% total_horas_programacion obj.programacion.id e.ID_Estudiante  %} h</td>
+      {% endifchanged %}
+    </tr>
+  {% endfor %}
+  {% endfor %}
+  <tr class="table-info">
+      <td><strong>Total</strong></td>
+      <td>{% total_horas_estudiante e.ID_Estudiante %} h</td>
+  </tr>
+
+  </tbody>
+</table>
+</div>
+
+
+<p>
+  <strong><i class="fa fa-list-alt" aria-hidden="true"></i> Detallado de asistencias:</strong>
+
+</p>
+
+    <table class="table table-striped table-hover table-bordered">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Nombre Actividad</th>
+      <th>Fecha Asistencia</th>
+      <th>Horas Asistidas</th>
+    </tr>
+  </thead>
+  <tbody>
+     {% regroup a by programacion as grouped %}
+  {% for group in grouped %}
+  {% for obj in group.list %}
+    <tr>
+      {% ifchanged %}<td rowspan="{{ group.list|length }}">{{ obj.programacion }}</td>{% endifchanged %}
+      <td>{{ obj.fecha_asistencia }}</td>
+     <td>{{ obj.n_horas }} h</td>
+    </tr>
+  {% endfor %}
+  {% endfor %}
+  </tbody>
+</table>
+
+
+  <a href="" class="btn btn-success"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> IMPRIMIR </a>
+
+
+
+
+
+
+
+{% endblock %}

@@ -21,7 +21,7 @@ class Actividad(models.Model):
     class Meta:
         verbose_name_plural = "Actividades"
     def __unicode__(self):
-        return unicode(self.Codigo_actividad)
+        return unicode(self.tipo_actividad)
 
 #Modelo de la clase registro de actividad
 class RegistroActividad(models.Model):
