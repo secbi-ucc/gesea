@@ -61,6 +61,10 @@
 
 </div>
             <br>
+
+            <strong>Intensidad: </strong> {{h.get_time_diff}} h <br>
+            Horario: {{h}} h <br>
+
             <small>Fecha: {% now "M-d-y" %}</small>
             <br>
 
@@ -83,11 +87,11 @@
       <td>{{ i.estudiante.ID_Estudiante }}</td>
       <td>{{ i.estudiante.nombre_completo }}</td>
       <td>
-          <form action="{% url "horas-asistencia" i.id%}" method="post">
+          <form action="{% url "horas-asistencia" p.id i.id%}" method="post">
               {% csrf_token %}
               <div class="input-stepper">
               <button  class="minus"><i class="fa fa-minus"></i></button>
-                  <input  type="text" name="n_horas" value="{{  i.n_horas }}" />
+                  <input  type="number" max="{{h.get_time_diff}}" name="n_horas" value="{{  i.n_horas }}" />
               <button  class="plus"><i class="fa fa-plus"></i></button>
               </div>
           </form>

@@ -1,12 +1,17 @@
 from django.db import models
 from actividades.models import Actividad ,Area
 from django.utils import timezone
+from datetime import datetime, date
 
 class Horario(models.Model):
     Hora_Inicio = models.TimeField(null=True)
     Hora_Final = models.TimeField(null=True)
     class Meta:
         verbose_name_plural = "Horas"
+
+    def get_time_diff(self):
+        timediff = datetime.combine(date.min,  self.Hora_Final) - datetime.combine(date.min, self.Hora_Inicio)
+        return str(timediff)[:1]
 
     def __unicode__(self):
         return unicode(str(self.Hora_Inicio) + " - " + str(self.Hora_Final))

@@ -18,7 +18,7 @@ urlpatterns = [
         name='no-asistio'),
 
 
-    url(r'^estudiante/horas-asistencia/(?P<asistencia_id>[\w\-]+)', views.agregar_horas_asistencia,
+    url(r'^estudiante/horas-asistencia/(?P<programacion_id>[\w\-]+)/(?P<asistencia_id>[\w\-]+)', views.agregar_horas_asistencia,
         name='horas-asistencia'),
 
     # Django-Select2
