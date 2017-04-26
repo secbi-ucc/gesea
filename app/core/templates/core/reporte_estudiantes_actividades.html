@@ -1,0 +1,95 @@
+{% extends "admin/base_site.html" %}
+{% load reportes %}
+{% load i18n %}
+
+
+
+{% block extrastyle %}
+    <script src="https://use.fontawesome.com/b7fd754cf7.js"></script>
+    <style>
+        #suit-nav{
+        display: none
+        }
+
+    .breadcrumbs{
+        display: none;
+    }
+
+    #suit-sub-nav {
+        display: none !important;
+    }
+
+    #user-tools{
+        display: none;
+    }
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+    <div style="display: inline-block; margin-left: 10px">
+
+        <h3 style="font-size:30px;"> Actividad: {{progra.actividad}}</h3>
+        <small><h5>Instructor: {% if progra.Instructor == null  %} Por asignar {% else %} {{progra.Instructor.nombre_completo}} {% endif %}</h5></small>
+        <small><h5>Tipo: {{progra.TipodeParticipacion}}</h5> </small>
+        <small><h5>Lugar: {{progra.lugarActividad}}</h5> </small>
+
+
+    </div>
+
+    <h3 style="display: inline-block; float: right"> <i class="fa fa-certificate" aria-hidden="true"></i> Certificado 01 - Bienestar
+          <br>
+            <small>Fecha de emision: {% now "M-d-y" %} </small>
+    </h3>
+
+    <p>
+        <strong><i class="fa fa-list-alt" aria-hidden="true"></i> Listados de estudiantes inscritos a {{ progra.actividad }}</strong>
+    </p>
+
+    <table class="table table-striped table-hover table-bordered">
+        <thead class="thead-inverse">
+        <tr>
+            <th>Nro Documento</th>
+            <th>Nombre Estudiante</th>
+            <th>Programa Academico</th>
+            <th>Ciclo Lectivo</th>
+        </tr>
+     <tbody>
+    <div>
+    {% for estudiantes in inscritos %}
+        <tr>
+            <th> <h3 style="font-size:15px;">{{ estudiantes.estudiante.Nro_Documento }} </h3></th>
+            <th> <h3 style="font-size:15px;">{{ estudiantes.estudiante.nombre_completo }} </h3></th>
+            <th> <h3 style="font-size:15px;">{{ estudiantes.estudiante.Programa_Academico }} </h3></th>
+            <th> <h3 style="font-size:15px;">{{ estudiantes.estudiante.Ciclo_Lectivo }} </h3></th>
+        </tr>
+     {% endfor %}
+ </div>
+
+
+
+
+  </tbody>
+
+  </thead>
+
+</table>
+    <div>
+        <tr class="table-info">
+            <td><strong>Total Estudiantes: {% total_num_estudiante progra.id %} </strong></td>
+        </tr>
+
+    </div>
+
+    <br>
+  <a href="" class="btn btn-success"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> IMPRIMIR </a>
+
+
+
+
+
+
+
+{% endblock %}

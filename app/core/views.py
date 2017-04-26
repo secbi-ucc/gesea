@@ -6,6 +6,7 @@ from inscripcion.models import Inscripcion, Estudiantes
 from programacion.models import Programacion, Horario
 from inscripcion.models import Instructor
 from inscripcion.models import AsistenciaEstudiante
+from programacion.models import Actividad
 from django.utils.timezone import now
 from django.views.decorators.http import require_POST
 
@@ -21,7 +22,7 @@ def no_permitido(request):
     return render(request, 'core/no_permitido.html', {})
 
 @login_required ()
-def reporte_asistencia_estudiante(request, id_estudiante):
+def reporte_asistencia_estudiantes(request, id_estudiante):
 
     e = get_object_or_404(Estudiantes, ID_Estudiante=id_estudiante)
     a = AsistenciaEstudiante.objects.filter(estudiante=e)
@@ -32,9 +33,18 @@ def reporte_asistencia_estudiante(request, id_estudiante):
         'a': a,
         'e': e
     })
-
-
     return render(request, 'core/reporte_asistencia_estudiante.html', context)
+
+@login_required ()
+def reporte_estudiantes_inscritos(request, id):
+    progra= get_object_or_404(Programacion,id=id)
+    inscritos = Inscripcion.objects.filter(programacion=progra)
+    context = admin.site.each_context(request)
+    context.update({
+        'progra': progra,
+        'inscritos': inscritos
+    })
+    return render(request, 'core/reporte_estudiantes_actividades.html',context)
 
 @require_POST
 def flag_asistio(request, asistencia_id):

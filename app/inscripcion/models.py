@@ -99,5 +99,8 @@ class Instructor(models.Model):
     class Meta:
         verbose_name_plural = "Instructores"
 
+    def nombre_completo(self):
+        return self.Nombre + " " + self.Primer_Apellido + " " + self.Segundo_Apellido
+
     def __unicode__(self):
         return unicode(self.Nombre)

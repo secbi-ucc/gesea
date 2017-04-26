@@ -35,7 +35,15 @@ class Programaciones (admin.ModelAdmin):
 		return '%d' % Inscripcion.objects.filter(programacion=obj.id).count()
 		n_estudiantes_inscritos.short_description = 'Numero de inscritos'
 		n_estudiantes_inscritos.allow_tags = True
-	list_display = ['actividad','lugarActividad','horario','estudiantes_inscritos','n_estudiantes_inscritos']
+
+	def reporte_actividad(self, instance):
+		return "<a href='/admin/reporte/actividad/%s'> <i style='font-size:17px' class='fa fa-file-pdf-o' aria-hidden='true'></i>  </a>" % instance.id
+
+	reporte_actividad.short_description = "Reporte"
+	reporte_actividad.allow_tags = True
+	reporte_actividad.is_column = True
+
+	list_display = ['actividad','lugarActividad','horario','estudiantes_inscritos','n_estudiantes_inscritos','reporte_actividad']
 	list_filter = ['actividad' ]
 	inlines = [
 		ThingInline,

@@ -3,7 +3,10 @@ from .models import Area, Actividad, RegistroActividad
 
 # Register your models here.
 class Actividades (admin.ModelAdmin):
-	list_display = ['tipo_actividad','Cupo_Actividad', 'Estado_actividad']
+
+
+
+	list_display = ['id','tipo_actividad','Cupo_Actividad', 'Estado_actividad']
 	list_editable = ['Estado_actividad',]
 	list_filter = ['tipo_actividad', 'Estado_actividad']
 
