@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^admin/asistencia/(?P<is_refresh>\w+)$', views.listado_asistencia, name='listado-asistencia'),
 
 
-    url(r'^admin/reporte/(?P<id_estudiante>[\w\-]+)', views.reporte_asistencia_estudiantes, name='reporte-asistencia'),
+    url(r'^admin/reporte/(?P<id_estudiante>[\w\-]+)$', views.reporte_asistencia_estudiantes, name='reporte-asistencia'),
     url(r'^admin/reporte/actividad/(?P<id>[\w\-]+)$', views.reporte_estudiantes_inscritos, name='reporte-actividad'),
     url(r'^admin/', admin.site.urls),
 

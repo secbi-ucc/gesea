@@ -118,7 +118,13 @@ def listado_asistencia(request, is_refresh=None):
 
 def get_day_hours(p):
 
+    print get_current_day_name()
+
     current_day_horario = p.Dia_semana.filter(Dia_Actividad=get_current_day_name()).values('Horario__id')
+
+
+    print current_day_horario
+
     horario_id =  current_day_horario[0]['Horario__id']
 
     h = Horario.objects.get(id=horario_id)
@@ -130,19 +136,21 @@ def get_current_day_name():
 
     current_day = None
 
-    if now().strftime("%w") == '1':
+    if now().strftime("%w") == '2':
         current_day = 'LUNES'
-    elif now().strftime("%w") == '2':
-        current_day = 'MARTES'
     elif now().strftime("%w") == '3':
-        current_day = 'MIERCOLES'
+        current_day = 'MARTES'
     elif now().strftime("%w") == '4':
-        current_day = 'JUEVES'
+        current_day = 'MIERCOLES'
     elif now().strftime("%w") == '5':
-        current_day = 'VIERNES'
+        current_day = 'JUEVES'
     elif now().strftime("%w") == '6':
-        current_day = 'SABADO'
+        current_day = 'VIERNES'
     elif now().strftime("%w") == '7':
+        current_day = 'SABADO'
+    elif now().strftime("%w") == '1':
         current_day = 'DOMINGO'
+
+    print now().strftime("%w")
 
     return current_day

@@ -169,7 +169,10 @@
       stepperNumber = stepperInput.val();
       decrementButton = $( thisStepper ).find( 'button.minus' );
 
-      if ( stepperNumber === '0' || stepperNumber <= 0 ) {
+      incrementButtom = $(thisStepper).find('button.plus');
+
+
+      if (stepperNumber < 0 ) {
         // if so, disable the minus button.
         decrementButton.prop( 'disabled', true );
         stepperInput.val( 0 );
@@ -177,6 +180,17 @@
         // if number is positive, enable the minus button
         decrementButton.prop( 'disabled', false );
       }
+
+      var numero_max_horas = {{h.get_time_diff}};
+
+      if (stepperNumber > numero_max_horas){
+
+           stepperInput.val( numero_max_horas );
+           incrementButtom.prop('disabled', true)
+      }
+
+
+
 
     },
 
