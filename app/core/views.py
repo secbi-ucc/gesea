@@ -125,9 +125,16 @@ def get_day_hours(p):
 
     print current_day_horario
 
-    horario_id =  current_day_horario[0]['Horario__id']
 
-    h = Horario.objects.get(id=horario_id)
+    try:
+
+        horario_id =  current_day_horario[0]['Horario__id']
+
+        h = Horario.objects.get(id=horario_id)
+
+    except IndexError:
+
+        h = None
 
     return h
 
