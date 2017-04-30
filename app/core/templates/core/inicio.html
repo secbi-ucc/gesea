@@ -1,37 +1,132 @@
-{% extends "core/base.html" %}
-{% load static%}
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Gesea</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static '/assets/css/landing.css' %}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
-{%block contenido %}
-<section id="main-slider" class="no-margin">
-    <div class="carousel slide">
-        <div class="carousel-inner">
+		<style media="screen">
+			.name{
+				font-size: 25px;
+				position: relative;
+				right: 20px;
+				top: -14px;
+			}
 
-            <div class="item active" style="background-image: url({% static "assets/images/bg1.jpg" %})">
-                <div class="container">
-                    <div class="row slide-margin">
-                        <div class="col-sm-6">
-                            <div style="opacity: 0.9" class="carousel-content">
-                                <h1 style="color: #fff; background-color: #00b5cb; padding: 20px " class="animation animated-item-1">Bienvenido a Bienestar Universitario</h1>
-                                <h2 class="animation animated-item-2"></h2>
+			#nav {
+				top: 25px;
+    		position: relative;
+			}
 
-                                <a style="background: #7ac142" class="btn-slide animation animated-item-3" href="/admin/">Ingresar</a>
-                            </div>
-                        </div>
+			.pic {
+				width: 300px;
+			}
 
-                        <div class="col-sm-6 hidden-xs animation animated-item-4">
-                            <div class="slider-img">
-                                <img src="{% static "assets/images/img1.png"%}" class="img-responsive">
-                            </div>
-                        </div>
+			.copyright{
+				color: gray !important;
+			}
 
-                    </div>
-                </div>
-            </div><!--/.item-->
+			#footer{
+				background: #eee;
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo"><img style='width:70px' src="{% static 'assets/images/logo.svg' %}" alt=""> <strong class='name'>GESEA</strong></a>
+					<nav id="nav">
+						<a href="index.html">Inicio</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>Gestion y seguimiento de actividades</h1>
+					</header>
+
+					<div class="flex ">
+
+						<div>
+							<span class="icon fa-list-ul"></span>
+							<h3>Asistencia</h3>
+							<p>Toma de asistencia eficiente</p>
+						</div>
+
+						<div>
+							<span class="icon fa-file"></span>
+							<h3>Reportes</h3>
+							<p>Seguimiento de actividades</p>
+						</div>
+
+						<div>
+							<span class="icon fa-calendar-check-o"></span>
+							<h3>Programacion</h3>
+							<p>Pogramacion de actividades</p>
+						</div>
+
+					</div>
+
+					<footer>
+						<a href="/admin" class="button">Empezar</a>
+					</footer>
+				</div>
+			</section>
 
 
+		<!-- Three -->
+			<section id="three" class="wrapper align-center">
+				<div class="inner">
+					<div class="flex flex-2">
+						<article>
+							<div class="image round">
 
+							</div>
+							<header>
+								<h3>Plataforma<br /> Administrativa</h3>
+							</header>
+							<p>Programacion de activiades<br />registro de estudiantes y profesores.</p>
+							<footer>
+								<a href="#" class="button">Ingresar</a>
+							</footer>
+						</article>
+						<article>
+							<div class="image round">
 
-        </div><!--/.carousel-inner-->
-    </div><!--/.carousel-->
-</section><!--/#main-slider-->
-{% endblock %}
+							</div>
+							<header>
+								<h3>Aplicacion<br /> Movil</h3>
+							</header>
+							<p>Seguimiento de asistencia a activiades<br />para profesores.<br /></p>
+							<footer>
+								<a href="#" class="button">Descargar</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<img src="{% static '/assets/images/logo.svg' %}" alt="" style="width:150px;">
+
+					<div class="copyright">
+						&copy; GESEA. Desarrollado por <strong>Secbi</strong> 2017.
+					</div>
+
+				</div>
+			</footer>
+
+	</body>
+</html>
