@@ -6,3 +6,6 @@ Django-Select2==5.8.10
 docutils==0.13.1
 tablib==0.11.4
 wheel==0.24.0
+# api
+djangorestframework<3.7,>=3.6
+django-filter<1.1,>=1.0

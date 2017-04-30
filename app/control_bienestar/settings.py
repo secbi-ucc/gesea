@@ -24,16 +24,19 @@ SECRET_KEY = '$0x_kqva!@jl024f$n^t9dxn_j#-#%vg7=g=gk!lfr7na+o#j='
 DEBUG = True
 
 
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = (
     'core',
     'suit',
-    # Django Suit
+    'api',
 
     'django_select2',
+    'django_filters',
+    'rest_framework',
+
     # Django
     'django.contrib.admin',
     'django.contrib.auth',

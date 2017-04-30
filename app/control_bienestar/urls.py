@@ -25,4 +25,6 @@ urlpatterns = [
     # Django-Select2
     url(r'^select2/', include('django_select2.urls')),
 
+    url(r'', include('api.urls')),
+
 ]
