@@ -6,18 +6,20 @@
 {% block extrastyle %}
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link  href="{% static '/assets/css/header.css' %}"
 {% endblock %}
 
 {% block bodyclass %}{{ block.super|suit_body_class:request }}{% endblock %}
 
-{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+{% block title %}Gesea Admin{% endblock %}
 
 {% block branding %}
+     <img style="width: 75px; float:left"  class="logo-menu" src="{% static 'assets/images/logo.svg' %}" alt="logo">
     <h1 id="site-name">
         <a href="/">
-                <img style="width: 100px; float:left"  class="logo-menu" src="{% static 'assets/images/logo_menu.png' %}" alt="logo">
-                <p style="margin-top: 10px">Bienestar Universitario</p>
-                <span style="float: left" class="header-label">Monteria</span></a>
+
+                <p style="margin-top: 15px; margin-bottom:5px" > GESEA</p>
+                <span style="float: left; color: #90A4AE;" class="header-label">Sede Monteria</span></a>
     </h1>
 {% endblock %}
 
@@ -35,7 +37,7 @@
         <div id="user-tools" class="suit-user-tools">
             {% block welcome-msg %}
                 <span class="welcome">
-                <strong>{% firstof user.get_short_name user.get_username %}</strong>.
+
             </span>
 
             {% endblock %}
@@ -73,7 +75,10 @@
         <footer class="footer">
             <div class="container-fluid">
                 {% block footer_content %}
+
                     <div class="row">
+
+
 
                         <div class="col-xs-12 col-sm-3 footer-links">
                             {% block footer_links %}
@@ -82,8 +87,14 @@
                             {% endblock %}
                         </div>
 
+
+
                         <div class="col-xs-12 col-sm-6 text-sm-center footer-copyright">
+
                             {% block copyright %}
+
+                                <br>
+                                <br>
 
                                 © GESEA. Desarrollado por Secbi 2017.
                             {% endblock %}

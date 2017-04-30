@@ -2,6 +2,19 @@
 {% load i18n %}
 {% load static %}
 
+{% block extrastyle %}
+
+    <style>
+        #header {
+
+        background-color: #fff !important;
+
+        }
+
+
+    </style>
+{% endblock %}
+
 {% block branding %}
     <div class="suit-login-graphic">
         <img style="width: 100px"  class="logo-menu" src="{% static 'assets/images/logo.svg'%}" alt="logo">

@@ -1,10 +1,12 @@
 {% extends "admin/base_site.html" %}
 {% load reportes %}
 {% load i18n %}
+{% load static %}
 
 
 {% block extrastyle %}
     <script src="https://use.fontawesome.com/b7fd754cf7.js"></script>
+    <link  rel="stylesheet" href="{% static '/assets/css/header.css' %}"/>
     <style>
         #suit-nav{
         display: none
