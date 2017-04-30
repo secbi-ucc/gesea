@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = (
     'core',
-    'suit',
+    'core.apps.SuitConfig',
     'api',
 
     'django_select2',
