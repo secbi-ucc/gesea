@@ -2,7 +2,7 @@ diff-match-patch==20121119
 Django==1.10.5
 django-appconf==1.0.2
 django-import-export==0.5.1
-django-suit==2.0a1
+https://github.com/darklow/django-suit/tarball/v2
 Django-Select2==5.8.10
 docutils==0.13.1
 tablib==0.11.4
