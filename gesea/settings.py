@@ -81,11 +81,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 
-ROOT_URLCONF = 'control_bienestar.urls'
+ROOT_URLCONF = 'gesea.urls'
 
 LOGIN_REDIRECT_URL = '/admin'
 
-WSGI_APPLICATION = 'control_bienestar.wsgi.application'
+WSGI_APPLICATION = 'gesea.wsgi.application'
 
 
 # Database
@@ -133,7 +133,7 @@ TEMPLATES = [
 #BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 STATICFILES_DIRS = (
-    os.path.join('core/static'),
+    os.path.join('gesea/static'),
 )
 
 #STATIC_ROOT = os.path.join('core/static')
