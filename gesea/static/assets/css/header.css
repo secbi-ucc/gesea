@@ -52,3 +52,34 @@
         body.suit_layout_horizontal #header #user-tools a {
             color: #00aa87 ;
         }
+
+        body.suit_layout_horizontal #suit-sub-nav ul > li > a {
+            color: #047477 !important;
+        }
+
+        a {
+            color: #047477;
+        }
+        
+        .btn-primary, .submit-row input[type='submit']:not([class*="btn-"]):first-child, .submit-row input[type='button']:not([class*="btn-"]):first-child, .submit-row button:not([class*="btn-"]):first-child, body.login .submit-row input[type='submit'], #changelist #toolbar #changelist-search input[type='submit'], #changelist #changelist-form .actions button, #changelist #changelist-form .paginator input[type='submit'] {
+
+ background-color: #00aa87 !important;
+            border-color: #00aa87 !important;
+            color: #fff;
+}
+
+        .btn-info, #content-main > .object-tools > li > a:not([class*="btn-"]) {
+    color: #fff;
+    background-color: #047477 ;
+    border-color: #047477 ;
+}
+
+        .btn-info:hover, #content-main > .object-tools > li > a:hover:not([class*="btn-"]) {
+    color: #fff;
+    background-color: #047477 ;
+    border-color: #047477 ;
+}
+
+        .breadcrumbs a {
+    color: #656575;
+}
