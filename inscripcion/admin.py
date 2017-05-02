@@ -6,7 +6,9 @@ from import_export import resources
 from import_export.widgets import ForeignKeyWidget
 from import_export import fields
 from import_export.admin import ImportExportModelAdmin
+from rest_framework.authtoken.admin import TokenAdmin
 
+TokenAdmin.raw_id_fields = ('user',)
 # Register your models here.
 
 

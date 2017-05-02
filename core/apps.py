@@ -46,6 +46,7 @@ class SuitConfig(DjangoSuitConfig):
         ParentItem('Usuarios', children=[
             ChildItem(model='auth.user'),
             ChildItem(model='auth.group'),
+            ChildItem(model='authtoken.token'),
 
         ]),
 

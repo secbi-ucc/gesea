@@ -23,6 +23,7 @@ SECRET_KEY = '$0x_kqva!@jl024f$n^t9dxn_j#-#%vg7=g=gk!lfr7na+o#j='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+SITE_ID = '1'
 
 ALLOWED_HOSTS = ['*']
 
@@ -35,15 +36,21 @@ INSTALLED_APPS = (
 
     'django_select2',
     'django_filters',
+
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+
 
     # Django
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'allauth',
 
     'actividades',
     'programacion',
@@ -142,6 +149,23 @@ STATIC_URL = '/static/'
 
 
 MEDIA_URL = '/media/'
+
+AUTHENTICATION_BACKENDS = (
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+)
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    )
+}
 
 try:
     from .production_settings import *

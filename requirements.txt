@@ -10,3 +10,5 @@ wheel==0.24.0
 # api
 djangorestframework<3.7,>=3.6
 django-filter<1.1,>=1.0
+django-rest-auth
+django-allauth==0.32.0
