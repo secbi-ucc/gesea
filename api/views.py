@@ -102,11 +102,6 @@ class AsistenciaEstudianteViewSet(viewsets.ModelViewSet):
     queryset = AsistenciaEstudiante.objects.all()
     paginate_by = None
 
-    def get_queryset(self):
-        user = self.request.user
-        p = Programacion.objects.filter(Instructor__user=user).last()
-        return AsistenciaEstudiante.objects.filter(programacion=p)
-
 
 class listado_asistencia(APIView):
 
