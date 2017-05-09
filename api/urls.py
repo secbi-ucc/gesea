@@ -1,15 +1,20 @@
 from django.conf.urls import url, include
-from rest_framework import routers
-from .views import AsistenciaEstudianteViewSet, LoginViewCustom, LogoutViewViewCustom
+from .routers import DefaultRouterWithSimpleViews
+from .views import (AsistenciaEstudianteViewSet, LoginViewCustom, LogoutViewViewCustom,
+                    UserViewSet, ProgramacionViewSet, listado_asistencia)
 
-router = routers.DefaultRouter()
-router.register(r'asistencia', AsistenciaEstudianteViewSet)
+router = DefaultRouterWithSimpleViews()
+router.register(r'asistencia/estudiante', AsistenciaEstudianteViewSet)
+router.register(r'programacion', ProgramacionViewSet)
+router.register(r'user', UserViewSet, 'user')
+router.register(r'login', LoginViewCustom, 'login')
+router.register(r'logout', LogoutViewViewCustom, 'logout')
+
 
 
 urlpatterns = [
-    url(r'^rest-auth/login/$', LoginViewCustom.as_view(), name='rest_login'),
-    url(r'^rest-auth/logout/$', LogoutViewViewCustom.as_view(), name='rest_logout'),
     #url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^api/asistencia/lista/(?P<programacion_id>\d+)/$', listado_asistencia.as_view()),
     url(r'^api/auth/', include('rest_framework.urls')),
     url(r'^api/', include(router.urls)),
 ]
